@@ -18,20 +18,20 @@
 ## Verarbeitungsprinzip
 
 - Lesen (Eingabe)
-  _öffne(Strom)_
-  _solange(Daten zu lesen) {_
-    _lies(Daten)_
-    _verarbeite(Daten)_
-  _}_
-  _schließe(Strom)_
+  _öffne(Strom)_\
+  _solange(Daten zu lesen) {_\
+    _lies(Daten)_\
+    _verarbeite(Daten)_\
+  _}_\
+  _schließe(Strom)_\
 
 - Schreiben (Ausgabe)
-  _öffne(Strom)_
-  _solange(Daten zu schreiben) {_
-    _verarbeite(Daten)_
-    _schreibe(Daten)_
-  _}_
-  _schließe(Strom)_
+  _öffne(Strom)_\
+  _solange(Daten zu schreiben) {_\
+    _verarbeite(Daten)_\
+    _schreibe(Daten)_\
+  _}_\
+  _schließe(Strom)_\
 
 
 ## java.io hinsichtlich Ein- und Ausgabe
@@ -66,6 +66,7 @@
 ...sind bei Streams möglich.
 
 | Art             | Definition                                                                                                                                                                    |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Verkettung      | Zusammenfassung von Dateien, Darstellung als einzigen Strom für Aufrufer                                                                                                      |
 | Verschachtelung | erlaubt Konstruktion von Filtern, die bei Ein- und Ausgabe bestimmte Zusatzfunktionen übernehmen, bspw.: Puffern von Zeichen, Zählen von Zeilen, Interpretation binärer Daten |
 
@@ -80,12 +81,12 @@
 - abstrakte Superklassen = definieren Eigenschaften und Funktionen zum Erben für andere Klassen
   - bieten Methoden zum Lesen und Schreiben von 8-Bit Werten (Bytes) an
   - aus diesen selbst lassen sich jedoch keine Objekte erzeugen
-  - es lassen sich nur Objekte aus bspw. folgenden Beispielkonstruktionen bilden aus
+  - es lassen sich nur Objekte aus bspw. folgenden Beispielkonstruktionen bilden
     - FileInputStream (zur Eingabe in Programm)
     - ByteArrayInputStream (zur Eingabe in Programm)
     - FileOutputStream (zur Ausgabe aus Programm)
 
-- Zwei Byte-Streamklassen fpr Objekt-Serialisierung
+- Zwei Byte-Streamklassen für Objekt-Serialisierung
   - ObjectInputStream
   - ObjectOuputStream
 
@@ -99,9 +100,8 @@
   - Ausgabestrom - aus Programm lesen/ Ausgabe aus Programm
 - Verarbeitungsprinzip
   1. Stream öffnen
-  2. Solange Daten vorhanden, diese lesen/schreiben
-  3. Lies und verarbeite/verarbeite und schreibe
-  4. Wenn alle Daten gelesen/geschrieben, Stream wieder schließen
+  2. Solange Daten vorhanden, diese lesen und verarbeiten/ verarbeiten und schreiben
+  3. Wenn alle Daten gelesen/geschrieben, Stream wieder schließen
 - java.io stellt verschiedene Klassen und Interfaces für Ein- und Ausgabe bereit
   - Klassen für verschiedenartige Ströme: InputStream, OutputStream, Reader, Writer
   - Interfaces für bestimmte Funktionalitäten: DataInput, DataOutput, ObjectInput, ObjectOuput, Serializable
