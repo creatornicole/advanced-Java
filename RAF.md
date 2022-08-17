@@ -35,5 +35,6 @@ try {
 
 ## Zusammenfassung
 
-- Dienstklasse des java.io Package zum wahlfreien Zugriff auf Datei mittels Dateizeiger
+- RAF = RandomAccessFile
+- Dien0stklasse des java.io Package zum wahlfreien Zugriff auf Datei mittels Dateizeiger
 - dafür Dateizeiger an entsprechende Position setzen
