@@ -4,6 +4,14 @@
 
 - viele Dateien durch spezielle Signaturen erkennbar
 
+## Aufbau
+
+| Teil    | Inhalt                                                                                                |
+|---------|-------------------------------------------------------------------------------------------------------|
+| Header  | spezifische Dateiinformationen, diese Dateiinformationen können sich von Datei zu Datei unterscheiden |
+| Content | eigentlicher Inhalt der Datei                                                                         |
+| Footer  | schließt Datei meist ab                                                                               |
+
 ## Dateiattribute
 
 ...sind im Allgemeinen zusätzliche Informationen, die über den eigentlichen Inhalt hinausgehen.
