@@ -17,21 +17,21 @@
 
 ## Verarbeitungsprinzip
 
-- Lesen (Eingabe)
+- Lesen (Eingabe)\
   _öffne(Strom)_\
   _solange(Daten zu lesen) {_\
     _lies(Daten)_\
     _verarbeite(Daten)_\
   _}_\
-  _schließe(Strom)_\
+  _schließe(Strom)_
 
-- Schreiben (Ausgabe)
+- Schreiben (Ausgabe)\
   _öffne(Strom)_\
   _solange(Daten zu schreiben) {_\
     _verarbeite(Daten)_\
     _schreibe(Daten)_\
   _}_\
-  _schließe(Strom)_\
+  _schließe(Strom)_
 
 
 ## java.io hinsichtlich Ein- und Ausgabe
