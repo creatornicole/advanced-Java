@@ -2,6 +2,9 @@
 
 ...ist eine Menge von logisch zusammengehörenden  Daten, die auf einem geeigneten Medium permanent gespeichert werden und über einen Bezeichner identifizierbar sind.
 
+- Dateien kann man sich als Arrays auf einem Speichermedium vorstellen
+  -> nächste Zugriff auf Datei wird durch Dateizeiger (file pointer) bestimmt
+  -> beim Lesen oder Schreiben wird Zeiger um entsprechende Anzahl Bytes versetzt
 - viele Dateien durch spezielle Signaturen erkennbar
 
 ## Aufbau
@@ -32,6 +35,7 @@
   - Menge von logisch zusammengehörenden Daten
   - permanent auf geeigneten Medium gespeichert
   - identifizierbar über Bezeichner
+- Datei besteht aus Header, Content und Footer
 - Datei hat Dateiattribute
   - auch als Metadaten bezeichnet
   - neben Dateiinhalt zusätzliche Infos wie: Name, Typ, Ortsinformationen, Größe, Zeitstempel, Rechte, Eigentümer
