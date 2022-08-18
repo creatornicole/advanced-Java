@@ -84,6 +84,37 @@ try {
   }
 }
 ```
+## Beispiel Schreiben und Lesen mittels RAF
+
+```java
+RandomAccessFile raf = null;
+try {
+    //RAF zum Lesen und Schreiben anlegen
+    raf = new RandomAccessFile("C:\\Dateipfad\\testRAF.txt", "rw");
+    //Quadratzahlen 0-100 hineinschreiben
+    for(int i = 0; i <= 100; i++) {
+      raf.writeDouble(Math.pow(i, 2));
+    }
+    //Dateizeiger an Dateianfang setzen
+    raf.seek(0);
+    //Geschriebenen Zahlen wieder auslesen und anzeigen lassen
+    while(raf.getFilePointer() < raf.length()) {
+      System.out.println(raf.readDouble());
+    }
+} catch (FileNotFoundException e) {
+    e.printStackTrace();
+} catch (IOException e) {
+    e.printStackTrace();
+} finally {
+    if(raf != null) {
+      try {
+        raf.close(); //Zugriff zu Ressource wieder schließen
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+}
+```
 
 ## Zusammenfassung
 
