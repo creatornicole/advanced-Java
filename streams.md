@@ -47,7 +47,7 @@
   | Writer       | Ausgabestrom für Zeichen               |
 
 - Interfaces für bestimmte Funktionalitäten
-  | Interface    | Bereitstellen von... |
+  | Interface    | Definieren           |
   |--------------|----------------------|
   | DataInput    | Methoden zur Eingabe elementarer Datentypen sowie Zeichenketten |
   | DataOutput   | Methoden zur Ausgabe elementarer Datentypen sowie Zeichenketten |

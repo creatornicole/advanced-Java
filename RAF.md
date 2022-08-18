@@ -43,6 +43,16 @@
   | public long getFilePointer() throws IOException | aktuellen Dateizeiger abfragen                |
   | public void seek(long pos) throws IOException   | Dateizeiger an angegebene Position pos setzen |
 
+## Ein- und Ausgabe
+
+- RAF implementiert Interfaces und durch diese definierte Methoden
+  - DataInput -> Ausgabe aus Programm (read-Methoden)
+  - DataOutput -> Eingabe in Programm (write-Methoden)
+- drei weitere elementare Lesemethoden
+  - public int read()
+  - public int read(byte[] b)
+  - public int read(byte[] b, int off, int len)
+
 ## Methoden
 
 | Methode                                                  | Erklärung                                                                                                                      |
