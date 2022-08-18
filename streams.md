@@ -49,8 +49,8 @@
 - Interfaces für bestimmte Funktionalitäten
   | Interface    | Bereitstellen von... |
   |--------------|----------------------|
-  | DataInput    |                      |
-  | DataOutput   |                      |
+  | DataInput    | Methoden zur Eingabe elementarer Datentypen sowie Zeichenketten |
+  | DataOutput   | Methoden zur Ausgabe elementarer Datentypen sowie Zeichenketten |
   | ObjectInput  |                      |
   | ObjectOuput  |                      |
   | Serializable |                      |
