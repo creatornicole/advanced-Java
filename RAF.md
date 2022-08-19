@@ -116,8 +116,96 @@ try {
 }
 ```
 
+## Beispiel speichern unterschiedlich großer Datenelemente in RAF
+
+- Anfänge der Datenelemente wie bei elementaren Datentypen nicht berechenbar
+  - deswegen muss man sich die Anfangspositionen der einzelnen Daten innerhalb der Datei merken
+- Anfangspositionen der einzelnen Daten innerhalb Datei in Index-Datei speichern
+  - Index-Datei speichert Positionen von Datenelementen, enhält also die Dateizeiger der einzelnen Elemente
+    - das i.Element der Index-Datei enhält den Dateizeiger auf das i. Datenelement in der Datei der eigentlichen Daten
+- Dateizeiger von Typ long
+  -> 8 * i ist Position des i. Dateizeigers in der Index-Datei
+
+```java
+/** Uebergebenes String-Array in angegebene Datei schreiben
+*
+* @param dateiname In zu speichernde Datei
+* @param strarr Zu speicherndes String-Array mit Zeichenketten
+*/
+public static void schreibenIn(String dateiname, String[] strarr) {
+  RandomAccessFile raf = null; //Zum Speichern der Daten des String-Arrays
+  RandomAccessFile index = null; //Zum Speichern der Dateizeiger
+  try {
+    raf = new RandomAccessFile("Dateipfad" + ".txt", "rw");
+    index = new RandomAccessFile("Dateipfad" + ".idx", "rw");
+    //String-Array durchlaufen
+    for(int i = 0; i < strarr.length; i++) {
+      //Dateizeiger auf i. String-Array Element in Index-Datei speichern
+      index.writeLong(raf.getFilePointer());
+      //i. String-Array Element in RAF schreiben
+      raf.writeUTF(strarr[i]);
+    }
+  } catch (FileNotFoundException e) {
+      e.printStackTrace();
+  } catch (IOException e) {
+      e.printStackTrace();
+  } finally {
+    try {
+        raf.close();
+        index.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+  }
+}
+
+/**
+* n. Zeichenkette aus Datei ausgeben
+*
+* @param dateiname Datei aus der gelesen werden soll
+* @param n Nummer der zu lesenden Zeichenkette in Datei
+* @return Zeichenkette an Position n in Datei
+*/
+public static String liesAus(String dateiname, int n) {
+  RandomAccessFile raf = null;
+  RandomAccessFile index = null;
+  String str = null;
+  //Index ab 1 beginnend setzen
+  n--;
+  try {
+    raf = new RandomAccessFile("Dateipfad" + ".txt", "r");
+    index = new RandomAccessFile("Dateipfad" + ".idx", "r");
+    //Dateizeiger in Index-Datei an richtige Stelle setzen
+    index.seek((long) 8 * n);
+    //Dateizeiger fuer Datei mit Daten auslesen
+    long idx = index.readLong();
+    //Dateizeiger in Datei mit Daten an richtige Stelle setzen
+    raf.seek(idx);
+    //Zeichenkette an gewuenschter Position n auslesen
+    str = raf.readUTF();
+  } catch (FileNotFoundException e) {
+      e.printStackTrace();
+  } catch (EOFException e) {
+      e.printStackTrace();
+  } catch (IOException e) {
+      e.printStackTrace();
+  } finally {
+    try {
+        raf.close();
+        index.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+  }
+  return str;
+}
+
+```
+
+
 ## Zusammenfassung
 
 - RAF = RandomAccessFile
 - Dien0stklasse des java.io Package zum wahlfreien Zugriff auf Datei mittels Dateizeiger
 - dafür Dateizeiger an entsprechende Position setzen
+- Speichern von unterschiedlich großen Datenelementen mithilfe von extra Index-Datei, die Dateizeiger auf Daten enthält
