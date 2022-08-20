@@ -70,6 +70,36 @@ public class DateiVerschieben {
 }
 ```
 
+## Beispiel Datei von Webserver in Verzeichnis kopieren mit NIO
+
+- dafür URL-Klasse verwenden um URL-Objekt von Webserver-URL erzeugen zu können
+- für URL-Objekt InputStream öffnen
+- Daten von InputStream in Zielverzeichnis mit copy() von Files kopieren
+  -> copy(InputStream, Zielverzeichnis, StandardCopyOption.REPLACE_EXISTING) kopiert alle Bytes des InputStream in angegebener Datei im Zielverzeichnis
+
+```java
+public class DateiKopierenWebserver {
+  public static main(String[] args) {
+    URL url;
+    InputStream ips = null;
+    try {
+        url = new URL("WebserverURL");
+        ips = url.openStream();
+        Path pTarget = Paths.get("Dateizielpfad.txt");
+        Files.copy(ips, pTarget, StandardCopyOption.REPLACE_EXISTING);
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+          ips.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+    }
+  }
+}
+```
+
 ## Zusammenfassung
 
 - NIO = New Input Output
