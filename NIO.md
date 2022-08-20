@@ -36,6 +36,16 @@
   - kopieren
   - löschen
 
+| Methode                                     | Verwendung                                             | Hinweise                                   |
+|---------------------------------------------|--------------------------------------------------------|--------------------------------------------|
+| createDirectory(Path dir)                   | Neues Verzeichnis erstellen                            |                                            |
+| exists(Path p)                              | Trifft Aussage darüber, ob Datei/Verzeichnis existiert |                                            |
+| copy(Path source, Path target, CopyOptions) | Kopiert Source in Target                               | Path muss bei beiden Dateinamen beinhalten |
+| move(Path source, Path target, CopyOptions) | Verschiebt Source zu Target                            | Path muss bei beiden Dateinamen beinhalten |
+
+- CopyOptions
+  - StandardCopyOption.REPLACE_EXISTING -> Ersetzt Datei bzw. Verzeichnis am Zielort
+
 ## Beispiel Datei kopieren mit NIO
 
 ```java
@@ -44,6 +54,18 @@ public class DateiKopieren {
     Path quelle = Paths.get("D:\\test.txt");
     Path ziel = Paths.get("D:\\test2.txt");
     Files.copy(quelle, ziel, StandardCopyOption.REPLACE_EXISTING); //quelle muss bereits existieren
+  }
+}
+```
+
+## Beispiel Datei verschieben mit NIO
+
+```java
+public class DateiVerschieben {
+  public static main(String[] args) throws IOException {
+    Path pSource = Paths.get("Dateiquellpfad.txt"); //Pfad beinhaltet Datei mit Dateinamen
+    Path tSource = Paths.get("Dateizielpfad.txt"); //Pfad beinhaltet Datei mit Dateinamen
+    Files.move(pSource, tSource, StandardCopyOption.REPLACE_EXISTING);
   }
 }
 ```
