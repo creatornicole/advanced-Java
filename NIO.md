@@ -43,7 +43,7 @@ public class DateiKopieren {
   public static void main(String[] args) throws IOException {
     Path quelle = Paths.get("D:\\test.txt");
     Path ziel = Paths.get("D:\\test2.txt");
-    Files.copy(quelle, ziel, StandardCopyOption.REPLACE_EXISTING);
+    Files.copy(quelle, ziel, StandardCopyOption.REPLACE_EXISTING); //quelle muss bereits existieren
   }
 }
 ```
