@@ -36,12 +36,31 @@
   - kopieren
   - löschen
 
-| Methode                                     | Verwendung                                             | Hinweise                                   |
-|---------------------------------------------|--------------------------------------------------------|--------------------------------------------|
-| createDirectory(Path dir)                   | Neues Verzeichnis erstellen                            |                                            |
-| exists(Path p)                              | Trifft Aussage darüber, ob Datei/Verzeichnis existiert |                                            |
-| copy(Path source, Path target, CopyOptions) | Kopiert Source in Target                               | Path muss bei beiden Dateinamen beinhalten |
-| move(Path source, Path target, CopyOptions) | Verschiebt Source zu Target                            | Path muss bei beiden Dateinamen beinhalten |
+| Methode                                                                                                                   | Verwendung                                                                  | Hinweise                                   |
+|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------|
+| createDirectory(Path dir)                                                                                                 | Neues Verzeichnis erstellen                                                 |                                            |
+| createFile(Path path, FileAttribute<>)                                                                                    | Neue, leere Datei erstellen                                                 | failed, wenn diese bereits existiert       |
+| createLink(Path link, Path existing)                                                                                      | Erstellt neuen Link zu existierenden Datei                                  |                                            |
+| exists(Path p)                                                                                                            | Trifft Aussage darüber, ob Datei/Verzeichnis existiert                      |                                            |
+| notExists(Path path, LinkOption)                                                                                          | Trifft Aussage darüber, ob Datei/Verzeichnis nicht existiert                |                                            |
+| copy(Path source, Path target, CopyOptions)                                                                               | Kopiert Source in Target                                                    | Path muss bei beiden Dateinamen beinhalten |
+| move(Path source, Path target, CopyOptions)                                                                               | Verschiebt Source zu Target                                                 | Path muss bei beiden Dateinamen beinhalten |
+| delete(Path path)                                                                                                         | Löscht angegebene Datei                                                     |                                            |
+| deleteIfExists(Path path)                                                                                                 | Löscht angegebene Datei falls diese existiert                               |                                            |
+| getLastModifiedTime(Path path, LinkOption)                                                                                | Gibt letzte Bearbeitungszeit aus                                            |                                            |
+| getOwner(Path path, LinkOption)                                                                                           | Gibt Besitzer der Datei aus                                                 |                                            |
+| setLastModifiedTime(Path path, FileTime time)                                                                             | Setzt neue letzte Bearbeitungszeit                                          |                                            |
+| setOwner(Path path, UserPrincipal owner)                                                                                  | Setzt neuen Besitzer der Datei                                              |                                            |
+| isDirectory(Path path, LinkOption)                                                                                        | Checkt, ob Datei Ordner ist                                                 |                                            |
+| isSameFile(Path path, Path path2)                                                                                         | Checkt, ob zwei Pfade die gleiche Datei lokalisieren                        |                                            |
+| newInputStream(Path path, OpenOption)                                                                                     | Öffnet Datei, gibt Inputstream zum Lesen aus der Datei zurück               |                                            |
+| newOutputStream(Path path, OpenOption)                                                                                    | Öffnet oder erstellt Datei, gibt Outputstream aus, um in Datei zu schreiben |                                            |
+| readAllBytes(Path path)                                                                                                   | Liest alles Bytes aus Datei                                                 |                                            |
+| readAllLines(Path path, Charset cs)                                                                                       | Liest alle Zeilen aus Datei                                                 |                                            |
+| size(Path path)                                                                                                           | Gibt Größe einer Datei aus                                                  | Ausgabe Größe in Bytes, Form long          |
+| write(Path path, byte[] bytes, OpenOption)                                                                                | Schreibt Bytes in eine Datei                                                |                                            |
+| write(Path path, Iterable<? extends CharSequence> lines, Charset cs, OpenOption) | Schreibt Textzeilen in Datei           |                                                                             |                                            |
+
 
 - CopyOptions
   - StandardCopyOption.REPLACE_EXISTING -> Ersetzt Datei bzw. Verzeichnis am Zielort
