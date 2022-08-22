@@ -72,8 +72,11 @@
 
 ## Zusammenfassung
 
-ZUSAMMENFASSEN!!!
-
+- zwei Möglichkeiten Element in Array zu finden
+  - lineares Durchlaufen -> Sequentielle/ Lineare Suche
+  - Intervall-Teilung -> Binäre Suche
+- Sequentielle/ Lineare Suche
+  - Array von Anfang beginnend durchlaufen, bis Element gefunden oder keine weiteren Elemente in Array mehr vorhanden sind
 - Binäre Suche
   - Bedingung: (aufsteigend) sortiertes Zahlenarray
   - Prinzip: Suche anhand des mittleren Elements des Arrays beginnen und durchführen
@@ -82,7 +85,7 @@ ZUSAMMENFASSEN!!!
 - Binäre Suche jedoch Anforderungen
   - Zugriff über Positionen
     - alle Elemente in Positionen gespeichert
-    - über diese Positionen direkt Zugriff auf dort befindliches Element möglich
+    - über diese Positionen direkt Zugriff auf dort befindliches Element
   - Anordnung Elemente nach Ordnung
     - Ordnung auf Elementen definiert (<=)
     - Elemente entsprechend der Ordnung angeordnet
