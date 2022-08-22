@@ -56,6 +56,9 @@
 
 - Zahlen-Array wird also in Teilarrays geteilt
 - die zu untersuchenden Teilarrays werden durch zwei Indizes "von" und "bis" als Abschnitt des gesamten Arrays gekennzeichnet
+- Teilarrays werden nach gleichen Prinzip wie gesamte Array am Anfang abgesucht
+  - mittleres Element bestimmen
+  - je nachdem, ob gleich/größer/kleiner Index zurückgeben/in rechten Teilarray/in linken Teilarray weitersuchen/-teilen
 
 - Aufwand: O(log2(n))
 
