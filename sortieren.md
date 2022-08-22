@@ -17,8 +17,8 @@
 
 ## Bubble-Sort
 
-1. 1. Durchlauf Array komplett durchlaufen, größte Element an letzte Position in Array verschieben
-2. 2. Durchlauf: Array bis zum vorletzten Platz durchlaufen, davon größte (also in 2. Durchlauf zweitgrößte) Element an letzte Position in durchlaufenen Abschnitt (also in 2. Durchlauf an vorletzte Position) bringen
+1. Erster Durchlauf: Array komplett durchlaufen, größte Element an letzte Position in Array verschieben
+2. Zweiter Durchlauf: Array bis zum vorletzten Platz durchlaufen, davon größte (also in 2. Durchlauf zweitgrößte) Element an letzte Position in durchlaufenen Abschnitt (also in 2. Durchlauf an vorletzte Position) bringen
 3. ...
 4. (n-1). Durchlauf: Letzten beiden Element vergleichen und ggf. vertauschen
 
@@ -31,9 +31,9 @@
   - absteigend: größte Element suchen
 
 - [sortierter Bereich][unsortierter Bereich]
-  -> k erste Position im noch unsortierten Bereich
-  -> i Position des kleinsten/größten Elements im noch unsortierten Bereich
-  -> Element an Stelle k mit Element an Stelle i tauschen
+  - k erste Position im noch unsortierten Bereich
+  - i Position des kleinsten/größten Elements im noch unsortierten Bereich
+  - Element an Stelle k mit Element an Stelle i tauschen
 - un-/sortierter Bereich ändert sich pro Durchlauf
   - sortierter Bereich wird immer um ein Element größer
   - unsortierter Bereich wird immer um ein Element kleiner
