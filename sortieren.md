@@ -17,6 +17,8 @@
 
 ## Bubble-Sort
 
+...füge größtes Element der noch unsortierten Elemente an letzte Position in Abschnitt ein.
+
 1. Erster Durchlauf: Array komplett durchlaufen, größte Element an letzte Position in Array verschieben
 2. Zweiter Durchlauf: Array bis zum vorletzten Platz durchlaufen, davon größte (also in 2. Durchlauf zweitgrößte) Element an letzte Position in durchlaufenen Abschnitt (also in 2. Durchlauf an vorletzte Position) bringen
 3. ...
@@ -39,5 +41,9 @@
   - unsortierter Bereich wird immer um ein Element kleiner
 
 ## Insertion-Sort
+
+...nimm beliebiges Element der noch nicht sortierten Daten auf und ordne es an der richtigen Stelle ein.
+
+- auch hier bildet sich sortierter und unsortierter Bereich
 
 ## Effiziente Sortieralgorithmen
