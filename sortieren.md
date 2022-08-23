@@ -2,6 +2,8 @@
 
 ...Sortiervorgänge für Datenbestände verbrauchen in der praktischen Datenverarbeitung einen bedeutenden Anteil der verfügbaren Rechenkapazität, weswegen vielfältige Sortierverfahren entwickelt wurden.
 
+- Arrays aus einem oder keinem Element sind trivialerweise sortiert
+
 ## Einfache Sortieralgorithmen
 
 - Prinzip: Werden beim Überprüfen eines Arrays Nachbarelemente in falscher Reihenfolge gefunden, so werden sie vertauscht.
@@ -56,7 +58,7 @@
   - Vergleich mit (i-1). Element beginnen
   - vorhandene Elemente solange um Position nach rechts rücken, bis i. Element (das einzufügende Element) kleiner ist
   - ist einzufügende Element nicht mehr kleiner als vorhandene Elemente, so ist frei gewordenen Platz der richtige
-    
+
 ## Effiziente Sortieralgorithmen
 
 ...funktionieren nach dem "Teile und Herrsche" Prinzip.
@@ -80,13 +82,26 @@
 
 ## Merge Sort
 
-...Sortieren durch Mischen.
+...beruht auf der Beobachtung, dass es einfach ist, zwei sortierte Listen zu einer sortieren Gesamtliste zu mischen.
 
-- Idee
-  - Darstellung Teilarrays als Abschnitte des Arrays zwischen zwei Indizes _links_ und _rechts_
-  - (Teil)Array in zwei (annhähernd) gleiche Teile geteilt, durch Berechnung des Index in der Mitte (= (links + rechts) / 2) (= Partitionieren)
-  - Teilarrays sortieren
-  - sortierten Teilarrys in Hilfsarray so "mischen", sodass dabei die Sortierung erhalten bleibt (= Mischen)
+- sortieren durch "mischen"
+  - teilen Array in zwei Teilarrays
+  - Teilarrays separiert voneinander sortieren
+  - sortierte Teilarrays zum Schluss zu sortieren Gesamtarray mischen
+- rekursives Verfahren (ruft sich sozusagen immer wieder selbst auf)
+- Teilarrays werden als Abschnitte des zu sortierenden Arrays zwischen zwei Indizes _links_ und _rechts_ dargestellt
+- Mischen der beiden sortierten Teilarrays in zusätzlichen Hilfsarray
+
+1. Wenn Array mehr als ein Element hat, so spalte es in der Mitte auf (mitte = (links + rechts) / 2) (= Partitionieren)
+2. Rekursiv so weiter
+  - d.h. haben Teilarrays mehr als ein Element so spalte diese auch wieder in der Mitte auf
+  - dies geht solange weiter, bis daraus entstandene Teilarrays aus einem Element bestehen (einelementige Arrays trivialerweise sortiert)
+3. Mischen der Teilarrays zu Gesamtarrays
+  - beginnt mit einelementigen Teilarrays dessen beiden Elemente sortiert zusammengefügt bzw. "gemischt" Werden
+  - geht weiter bis beide Teilarrays entstehen
+  - zum letztendlichen Zusammenfügen/"Mischen" der beiden sortierten Teilarrays wird nun zusätzliches Hilfsarray benötigt
+  - Elemente werden schrittweise zu Hilfsarray hinzugefügt
+  - nächste in Hilfsarray einzuordnende Element ist kleinere der beiden noch nicht einsortierten nächstfolgenden Elemente des Teilarrays
 
 - Aufwand: O(n * log2n)
 
