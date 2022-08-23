@@ -102,6 +102,8 @@
   - zum letztendlichen Zusammenfügen/"Mischen" der beiden sortierten Teilarrays wird nun zusätzliches Hilfsarray benötigt
   - Elemente werden schrittweise zu Hilfsarray hinzugefügt
   - nächste in Hilfsarray einzuordnende Element ist kleinere der beiden noch nicht einsortierten nächstfolgenden Elemente des Teilarrays
+  - sobald Teilarrays leer, so Rest des anderen hinten anfügen
+  - Zum Schluss: sortiertes Hilfsarray zu zu sortierendem Array zurückschreiben
 
 - Aufwand: O(n * log2n)
 
