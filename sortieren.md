@@ -1,8 +1,5 @@
 # Sortieren
 
-- Prinzip der Sortieralgorithmen
-
-
 ## Einfache Sortieralgorithmen
 
 - Prinzip: Werden beim Überprüfen eines Arrays Nachbarelemente in falscher Reihenfolge gefunden, so werden sie vertauscht.

@@ -31,8 +31,13 @@
   - Speicherbedarf für Programm (konstant)
   - Speicherbedarf für Dateien
     - abhängig von Eingabewerten -> Speicherkomplexität
+      - "best case" -> günstigster Aufwand
+      - "average case" -> mittlerer Aufwand
+      - "worst case" -> ungünstigster Aufwand
 - Zeitaufwand
   - abhängig von Eingabewerten -> Rechenkomplexität
+
+
 
 ## O-Notation
 
