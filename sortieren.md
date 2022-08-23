@@ -1,12 +1,14 @@
 # Sortieren
 
+...Sortiervorgänge für Datenbestände verbrauchen in der praktischen Datenverarbeitung einen bedeutenden Anteil der verfügbaren Rechenkapazität, weswegen vielfältige Sortierverfahren entwickelt wurden.
+
 ## Einfache Sortieralgorithmen
 
 - Prinzip: Werden beim Überprüfen eines Arrays Nachbarelemente in falscher Reihenfolge gefunden, so werden sie vertauscht.
 
 | Algorithmus    | Prinzip                                                                                                        | Aufwand              | Verbesserungsmöglichkeiten                                         |
 |----------------|----------------------------------------------------------------------------------------------------------------|----------------------|--------------------------------------------------------------------|
-| Bubble-Sort    | größte Element in Abschnitt an letzte Position in Abschnitt bringen                                            | O(n^2) = quadratisch | aufhören, wenn in einem Durchlauf keine Elemente getauscht wurden  |
+| Bubble-Sort    | benachbarte Elemente vertauschen, falls sie in falscher Reihenfolge stehen und somit größte Element in Abschnitt an letzte Position in Abschnitt bringen                                            | O(n^2) = quadratisch | aufhören, wenn in einem Durchlauf keine Elemente getauscht wurden  |
 | Selection-Sort | Sortieren durch Auswahl des i.kleinsten Elements für die Position i des Arrays                                 | O(n^2) = quadratisch |                                                                    |
 | Insertion-Sort | Sortieren durch Einfügen des nächsten Elements in ein bereits sortiertes Teil-Array an der richtigen Stelle    | O(n^2) = quadratisch |                                                                    |
 
@@ -14,7 +16,7 @@
 
 ## Bubble-Sort
 
-...füge größtes Element der noch unsortierten Elemente an letzte Position in Abschnitt ein.
+...benachbarte Elemente vertauschen, falls sie in falscher Reihenfolge stehen.
 
 1. Erster Durchlauf: Array komplett durchlaufen, größte Element an letzte Position in Array verschieben
 2. Zweiter Durchlauf: Array bis zum vorletzten Platz durchlaufen, davon größte (also in 2. Durchlauf zweitgrößte) Element an letzte Position in durchlaufenen Abschnitt (also in 2. Durchlauf an vorletzte Position) bringen
@@ -41,8 +43,20 @@
 
 ...nimm beliebiges Element der noch nicht sortierten Daten auf und ordne es an der richtigen Stelle ein.
 
+- sortieren durch Einfügen des nächsten Elements in bereits sortiertes Teilarray an der richtigen Stelle
 - auch hier bildet sich sortierter und unsortierter Bereich
 
+1. Beginn: erstes Element ist erstes Teilarray
+  - ist einelementiges Array
+  - einelementige Arrays sind immer sortiert
+2. Danach: zweites Element mit ersten Element vergleichen
+  - ist <, so erstes Element eine Position nach rechts rücken
+  - ist >=, so bleiben Elemente an ihren Positionen
+3. Analog i. Element einfügen
+  - Vergleich mit (i-1). Element beginnen
+  - vorhandene Elemente solange um Position nach rechts rücken, bis i. Element (das einzufügende Element) kleiner ist
+  - ist einzufügende Element nicht mehr kleiner als vorhandene Elemente, so ist frei gewordenen Platz der richtige
+    
 ## Effiziente Sortieralgorithmen
 
 ...funktionieren nach dem "Teile und Herrsche" Prinzip.
@@ -134,9 +148,9 @@
 - Einfache Sortieralgorithmen
   - Prinzip: Werden beim Überprüfen eines Arrays Nachbarelemente in falscher Reihenfolge gefunden, so werden sie vertauscht
   - Aufwand: O(n^2)
-  - Bubble-Sort -> größte Element in Abschnitt an letzte Position in Abschnitt bringen
+  - Bubble-Sort -> benachbarte Elemente vertauschen, falls sie in falscher Reihenfolge stehen, somit größte nach hinten bringen
   - Selection-Sort -> Sortieren durch Auswahl des i.kleinsten Elements für die Position i des Arrays
-  - Insertion-Sort -> Sortieren durch Einfügen des nächsten Elements in ein bereits sortiertes Teilarray an der richtigen Stelle
+  - Insertion-Sort -> sortieren durch Einfügen von Elementen an der richtigen Stelle
 - Effiziente Sortieralgorithmen
   - Prinzip: "Teile und Herrsche"
   - Aufwand: O(n * log2n)
