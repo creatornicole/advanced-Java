@@ -131,13 +131,17 @@
 
 ## Zusammenfassung
 
-- zwei Typen von Sortieralgorithmen
-  - Einfache Sortieralgorithmen
-    - Bubble-Sort
-    - Selection-Sort
-    - Insertion-Sort
-  - Effiziente Sortieralgorithmen
-    - Merge Sort
-    - Quick-Sort
-    - Count Sort
-    - Radix-Sort
+- Einfache Sortieralgorithmen
+  - Prinzip: Werden beim Überprüfen eines Arrays Nachbarelemente in falscher Reihenfolge gefunden, so werden sie vertauscht
+  - Aufwand: O(n^2)
+  - Bubble-Sort -> größte Element in Abschnitt an letzte Position in Abschnitt bringen
+  - Selection-Sort -> Sortieren durch Auswahl des i.kleinsten Elements für die Position i des Arrays
+  - Insertion-Sort -> Sortieren durch Einfügen des nächsten Elements in ein bereits sortiertes Teilarray an der richtigen Stelle
+- Effiziente Sortieralgorithmen
+  - Prinzip: "Teile und Herrsche"
+  - Aufwand: O(n * log2n)
+  - Merge Sort -> Sortieren durch Mischen
+  - Quick-Sort -> sortieren, indem man zu allererst Array anhand eines Pivot-Elements in zwei Teilarrays zerlegt
+- Spezielle Sortierverfahren
+  - Count-Sort -> sortiert Werte durch Zählen des Vorkommens , Aufwand: O(n)
+  - Radix-Sort -> sortiert Zeichenfolgen fester Länge durch Verteilen auf Fächer
