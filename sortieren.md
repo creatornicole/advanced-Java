@@ -186,6 +186,10 @@
   - Verteilungslauf -> für Stelle i wird die Zeichenfolge auf das Fach für das Zeichen an dieser Stelle verteilt
   - Sammellauf -> Zeichenfolgen werden aus den Fächern unter Beibehaltung ihrer relativen Reihenfolge entnommen
 
+## "Unsortieren"
+
+...beschreibt Problem, dass man von geordneten Elementen eines Arrays eine zufällige Anordnung erzeugen muss.
+
 
 ## Zusammenfassung
 
