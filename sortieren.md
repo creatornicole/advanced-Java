@@ -49,15 +49,15 @@
 - auch hier bildet sich sortierter und unsortierter Bereich
 
 1. Beginn: erstes Element ist erstes Teilarray
-  1. ist einelementiges Array
-  2. einelementige Arrays sind immer sortiert
+   - ist einelementiges Array
+   - einelementige Arrays sind immer sortiert
 2. Danach: zweites Element mit ersten Element vergleichen
-  1. ist <, so erstes Element eine Position nach rechts rücken
-  2. ist >=, so bleiben Elemente an ihren Positionen
+   - ist <, so erstes Element eine Position nach rechts rücken
+   - ist >=, so bleiben Elemente an ihren Positionen
 3. Analog i. Element einfügen
-  1. Vergleich mit (i-1). Element beginnen
-  2. vorhandene Elemente solange um Position nach rechts rücken, bis i. Element (das einzufügende Element) kleiner ist
-  3. ist einzufügende Element nicht mehr kleiner als vorhandene Elemente, so ist frei gewordenen Platz der richtige
+   - Vergleich mit (i-1). Element beginnen
+   - vorhandene Elemente solange um Position nach rechts rücken, bis i. Element (das einzufügende Element) kleiner ist
+   - ist einzufügende Element nicht mehr kleiner als vorhandene Elemente, so ist frei gewordenen Platz der richtige
 
 ## Effiziente Sortieralgorithmen
 
@@ -94,16 +94,16 @@
 
 1. Wenn Array mehr als ein Element hat, so spalte es in der Mitte auf (mitte = (links + rechts) / 2) (= Partitionieren)
 2. Rekursiv so weiter
-  1. d.h. haben Teilarrays mehr als ein Element so spalte diese auch wieder in der Mitte auf
-  2. dies geht solange weiter, bis daraus entstandene Teilarrays aus einem Element bestehen (einelementige Arrays trivialerweise sortiert)
+   - d.h. haben Teilarrays mehr als ein Element so spalte diese auch wieder in der Mitte auf
+   - dies geht solange weiter, bis daraus entstandene Teilarrays aus einem Element bestehen (einelementige Arrays trivialerweise sortiert)
 3. Mischen der Teilarrays zu Gesamtarrays
-  1. beginnt mit einelementigen Teilarrays dessen beiden Elemente sortiert zusammengefügt bzw. "gemischt" Werden
-  2. geht weiter bis beide Teilarrays entstehen
-  3. zum letztendlichen Zusammenfügen/"Mischen" der beiden sortierten Teilarrays wird nun zusätzliches Hilfsarray benötigt
-  4. Elemente werden schrittweise zu Hilfsarray hinzugefügt
-  5. nächste in Hilfsarray einzuordnende Element ist kleinere der beiden noch nicht einsortierten nächstfolgenden Elemente des Teilarrays
-  6. sobald Teilarrays leer, so Rest des anderen hinten anfügen
-  7. Zum Schluss: sortiertes Hilfsarray zu zu sortierendem Array zurückschreiben
+   - beginnt mit einelementigen Teilarrays dessen beiden Elemente sortiert zusammengefügt bzw. "gemischt" Werden
+   - geht weiter bis beide Teilarrays entstehen
+   - zum letztendlichen Zusammenfügen/"Mischen" der beiden sortierten Teilarrays wird nun zusätzliches Hilfsarray benötigt
+   - Elemente werden schrittweise zu Hilfsarray hinzugefügt
+   - nächste in Hilfsarray einzuordnende Element ist kleinere der beiden noch nicht einsortierten nächstfolgenden Elemente des Teilarrays
+   - sobald Teilarrays leer, so Rest des anderen hinten anfügen
+   - Zum Schluss: sortiertes Hilfsarray zu zu sortierendem Array zurückschreiben
 
 - Hauptarbeit: Mischen der sortierten Teilarrays
 
