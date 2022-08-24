@@ -49,15 +49,15 @@
 - auch hier bildet sich sortierter und unsortierter Bereich
 
 1. Beginn: erstes Element ist erstes Teilarray
-  - ist einelementiges Array
-  - einelementige Arrays sind immer sortiert
+  1. ist einelementiges Array
+  2. einelementige Arrays sind immer sortiert
 2. Danach: zweites Element mit ersten Element vergleichen
-  - ist <, so erstes Element eine Position nach rechts rücken
-  - ist >=, so bleiben Elemente an ihren Positionen
+  1. ist <, so erstes Element eine Position nach rechts rücken
+  2. ist >=, so bleiben Elemente an ihren Positionen
 3. Analog i. Element einfügen
-  - Vergleich mit (i-1). Element beginnen
-  - vorhandene Elemente solange um Position nach rechts rücken, bis i. Element (das einzufügende Element) kleiner ist
-  - ist einzufügende Element nicht mehr kleiner als vorhandene Elemente, so ist frei gewordenen Platz der richtige
+  1. Vergleich mit (i-1). Element beginnen
+  2. vorhandene Elemente solange um Position nach rechts rücken, bis i. Element (das einzufügende Element) kleiner ist
+  3. ist einzufügende Element nicht mehr kleiner als vorhandene Elemente, so ist frei gewordenen Platz der richtige
 
 ## Effiziente Sortieralgorithmen
 
@@ -94,16 +94,18 @@
 
 1. Wenn Array mehr als ein Element hat, so spalte es in der Mitte auf (mitte = (links + rechts) / 2) (= Partitionieren)
 2. Rekursiv so weiter
-  - d.h. haben Teilarrays mehr als ein Element so spalte diese auch wieder in der Mitte auf
-  - dies geht solange weiter, bis daraus entstandene Teilarrays aus einem Element bestehen (einelementige Arrays trivialerweise sortiert)
+  1. d.h. haben Teilarrays mehr als ein Element so spalte diese auch wieder in der Mitte auf
+  2. dies geht solange weiter, bis daraus entstandene Teilarrays aus einem Element bestehen (einelementige Arrays trivialerweise sortiert)
 3. Mischen der Teilarrays zu Gesamtarrays
-  - beginnt mit einelementigen Teilarrays dessen beiden Elemente sortiert zusammengefügt bzw. "gemischt" Werden
-  - geht weiter bis beide Teilarrays entstehen
-  - zum letztendlichen Zusammenfügen/"Mischen" der beiden sortierten Teilarrays wird nun zusätzliches Hilfsarray benötigt
-  - Elemente werden schrittweise zu Hilfsarray hinzugefügt
-  - nächste in Hilfsarray einzuordnende Element ist kleinere der beiden noch nicht einsortierten nächstfolgenden Elemente des Teilarrays
-  - sobald Teilarrays leer, so Rest des anderen hinten anfügen
-  - Zum Schluss: sortiertes Hilfsarray zu zu sortierendem Array zurückschreiben
+  1. beginnt mit einelementigen Teilarrays dessen beiden Elemente sortiert zusammengefügt bzw. "gemischt" Werden
+  2. geht weiter bis beide Teilarrays entstehen
+  3. zum letztendlichen Zusammenfügen/"Mischen" der beiden sortierten Teilarrays wird nun zusätzliches Hilfsarray benötigt
+  4. Elemente werden schrittweise zu Hilfsarray hinzugefügt
+  5. nächste in Hilfsarray einzuordnende Element ist kleinere der beiden noch nicht einsortierten nächstfolgenden Elemente des Teilarrays
+  6. sobald Teilarrays leer, so Rest des anderen hinten anfügen
+  7. Zum Schluss: sortiertes Hilfsarray zu zu sortierendem Array zurückschreiben
+
+- Hauptarbeit: Mischen der sortierten Teilarrays
 
 - Aufwand: O(n * log2n)
 
@@ -111,8 +113,24 @@
 
 ## Quick-Sort
 
-...Zerlegen des Arrays anhand Pivot Element in zwei Teilarrays.
+...Zerlegen des Arrays anhand Pivot Element in zwei Teilarrays, die einzeln zu sortieren sind.
 
+- Aufteilung Array mit Hilfe von Pivot-Element
+  - je nach Wahl des Pivot-Elements entstehen unterschiedliche Abläufe des Verfahrens
+  - oft ist mittlere Element das Pivot-Element
+- letztendliche Aufteilung so, dass sämtliche Elemente des linken Teilarrays kleiner als Elemente des rechten Teilarrays sind, sodass, sobald die Teilarrays sortiert sind, auch das Gesamtarray sortiert ist
+
+
+1. Auswählen "Pivot-Element" (Vergleichselement)
+2. Anhand des Pivot-Elements Array aufteilen
+  1. von links: nächste Element, das größer oder gleich Pivot-Element ist herausfinden
+  2. von rechts: nächste Element, das kleiner oder gleich Pivot-Element ist herausfinden
+  3. diese beiden Elemente vertauschen, da diese jeweils in das andere Teilarray gehören
+  4. solange Suche nach derartigen Paaren von Elementen, bis man irgendwo im Inneren des Arrays trifft
+  5. Stelle an der man aufeinandertrifft = Stelle an der man Array teilt
+3. Sortieren der resultierenden beiden Teilarrays (WIE LÄUFT SORTIERUNG AB?!)
+
+NOCH MIT EINBAUEN!:
 - vom linken Rand aus: _erste_ Element des Arrays, das größer oder gleich dem Pivot-Element ist
 - vom rechten Rand aus: _erste_ Element des Arrays, das kleiner oder gleich dem Pivot-Element ist
 - beide Elemente vertauschen
@@ -126,6 +144,8 @@
     - entstehen durch Wahl Pivot-Element ungefähr gleich große Teilarrays, so Aufwand siehe Merge-Sort (O(n * log2n))
     - im ungünstigsten Fall (Teilarray enthält nur Pivot-Element), so ist Aufwand O(n^2)
   - oft wird Rand- oder Mittelelement genommen
+
+- Hauptarbeit: Aufteilung des zu sortierenden Arrays in Große und Kleine
 
 - Vorteil: sortiert "in situ" (in place), benötigt nur einen zusätzlichen Speicherplatz zum Vertauschen
 
