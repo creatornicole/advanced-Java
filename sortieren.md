@@ -150,14 +150,23 @@
 
 ## Count Sort
 
-...ist ein spezielles Sortierverfahren, welches Werte aus Bereichen der ganzen Zahlen, durch Zählen des Vorkommens sortiert.
+...ist ein spezielles Sortierverfahren, welches Werte aus Bereichen der natürlich Zahlen (nichtnegativ, ganz), durch Zählen des Vorkommens sortiert.
 
-- in Hilfsarray zählt man, wie oft jede Zahl in dem zu sortierenden Array vorkommt
-- entsprechend wie oft man Zahl gezählt hat, schreibt man diese zurück
-- verlangt einmaliges, lineares Durchlaufen durch Array
-  - erfordert so viele Schritte, wie Array-Elemente vorhanden sind
+- gehört zu sogenannten Verteilungsverfahren
+- Array wird genau zweimal durchlaufen
+  - erste Mal: Zählen Anzahl der Zahlen
+  - zweite Mal: Zurückschreiben Zahlen in zu sortierende Array
+  - Aufwand hängt daher linear von der Länge des zu sortierenden Arrays ab
+  - erfordert zweimal so viele Schritte, wie Array-Elemente vorhanden sind
 
-- Größe Hilfsarray ergibt sich aus Maximum der sortierenden Werte
+1. Anlegen Hilfsarray
+2. In Hilfsarray zählen, wie oft Zahl i unter zu sortierenden Zahlen vorkommt
+   - Anzahl Zahl i speichert man im Hilfsarray zaehler[i]
+3. Von i=0 ausgehend: jeden Index i sooft in zu sortierende Array zurückschreiben, wie es zaehler[i] aussagt
+
+- Größe des Hilfsarray muss zuvor festgelegt werden
+  - entweder obere Schranke der zu sortierenden Zahlen festlegen
+  - oder vor Sortieren Maximum der zu sortierenden Zahlen ermitteln (erfordert auch nur linearen Aufwand)
 
 - Aufwand: linearer Aufwand O(n)
 
