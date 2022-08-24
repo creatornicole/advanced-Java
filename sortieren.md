@@ -120,24 +120,16 @@
   - oft ist mittlere Element das Pivot-Element
 - letztendliche Aufteilung so, dass sämtliche Elemente des linken Teilarrays kleiner als Elemente des rechten Teilarrays sind, sodass, sobald die Teilarrays sortiert sind, auch das Gesamtarray sortiert ist
 
-
 1. Auswählen "Pivot-Element" (Vergleichselement)
 2. Anhand des Pivot-Elements Array aufteilen
-   - von links: nächste Element, das größer oder gleich Pivot-Element ist herausfinden
-   - von rechts: nächste Element, das kleiner oder gleich Pivot-Element ist herausfinden
+   - von links: _erste_ Element des Arrays, das größer oder gleich Pivot-Element ist herausfinden
+   - von rechts: _erste_ Element des Arrays, das kleiner oder gleich Pivot-Element ist herausfinden
    - diese beiden Elemente vertauschen, da diese jeweils in das andere Teilarray gehören
-   - solange Suche nach derartigen Paaren von Elementen, bis man irgendwo im Inneren des Arrays trifft
+   - Prozess fortsetzen, bis man sich trifft
    - Stelle an der man aufeinandertrifft = Stelle an der man Array teilt
-   - Sortieren der resultierenden beiden Teilarrays (WIE LÄUFT SORTIERUNG AB?!)
-
-NOCH MIT EINBAUEN!:
-- vom linken Rand aus: _erste_ Element des Arrays, das größer oder gleich dem Pivot-Element ist
-- vom rechten Rand aus: _erste_ Element des Arrays, das kleiner oder gleich dem Pivot-Element ist
-- beide Elemente vertauschen
-- Prozess fortsetzen, bis man sich trifft
-- dort, wo man sich trifft, wird Array geteilt
-  - Elemente des linken Teilarrays sind kleiner oder gleich der Elemente des rechten Teilarrays
-- Sortieren der Teilarrays, wodurch Gesamtarray automatisch sortiert ist
+     - Elemente des linken Teilarrays sind kleiner oder gleich der Elemente des rechten Teilarrays
+3. Sortieren der resultierenden beiden Teilarrays (rekursives Verfahren)
+   - sortieren Teilarrays hat zur Folge, dass Gesamtarray bei Zusammenfügen automatisch auch sortiert ist
 
 - Wahl Pivot-Element
   - entscheidet über Aufwand
