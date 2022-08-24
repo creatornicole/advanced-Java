@@ -238,3 +238,4 @@ private static void vertauschen(int[] zahlen, int i, int j) {
 - Spezielle Sortierverfahren
   - Count-Sort -> sortiert Werte durch Zählen des Vorkommens , Aufwand: O(n)
   - Radix-Sort -> sortiert Zeichenfolgen fester Länge durch Verteilen auf Fächer
+- Nicht nur das Problem des Sortierens existiert, sondern auch das Problem, dass man von geordneten Elementen eines Arrays eine zufällige Anordnung erzeugen muss.
