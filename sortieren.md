@@ -190,6 +190,37 @@
 
 ...beschreibt Problem, dass man von geordneten Elementen eines Arrays eine zufällige Anordnung erzeugen muss.
 
+Umsetzungsbeispiel für Zahlenarray:
+```java
+/**
+* Erzeugt zufaellige Anordnung fuer uebergebenes Array
+*
+* @param zahlen zu zufaellig anzuordnendes Array
+*/
+public static void unsortieren(int[] zahlen) {
+  int neuePos;
+  int limit = zahlen.length - 1; //maximale Wert der neuen Position
+  for(int = 0; i < zahlen.length; i++) { //alle Elemente des Arrays durchgehen
+    neuePos = (int) (Math.random() * (limit + 1)) + 0; //neue Position zwischen 0-limit bestimmen
+    if(i != neuePos)
+      vertauschen(zahlen, i, neuePos);
+  }
+}
+
+/**
+* Hilfsmethode zum Vertauschen zweier Werte an Position i und j in Array zahlen
+*
+* @param zahlen Array der Elemente
+* @param i Position des zu vertauschenden Elements
+* @param j Position des damit zu vertauschenden Elements
+*/
+private static void vertauschen(int[] zahlen, int i, int j) {
+  int hilf = zahlen[i];
+  zahlen[i] = zahlen[j];
+  zahlen[j] = hilf;
+}
+```
+
 
 ## Zusammenfassung
 
