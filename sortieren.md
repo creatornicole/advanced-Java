@@ -123,12 +123,12 @@
 
 1. Auswählen "Pivot-Element" (Vergleichselement)
 2. Anhand des Pivot-Elements Array aufteilen
-  1. von links: nächste Element, das größer oder gleich Pivot-Element ist herausfinden
-  2. von rechts: nächste Element, das kleiner oder gleich Pivot-Element ist herausfinden
-  3. diese beiden Elemente vertauschen, da diese jeweils in das andere Teilarray gehören
-  4. solange Suche nach derartigen Paaren von Elementen, bis man irgendwo im Inneren des Arrays trifft
-  5. Stelle an der man aufeinandertrifft = Stelle an der man Array teilt
-3. Sortieren der resultierenden beiden Teilarrays (WIE LÄUFT SORTIERUNG AB?!)
+   - von links: nächste Element, das größer oder gleich Pivot-Element ist herausfinden
+   - von rechts: nächste Element, das kleiner oder gleich Pivot-Element ist herausfinden
+   - diese beiden Elemente vertauschen, da diese jeweils in das andere Teilarray gehören
+   - solange Suche nach derartigen Paaren von Elementen, bis man irgendwo im Inneren des Arrays trifft
+   - Stelle an der man aufeinandertrifft = Stelle an der man Array teilt
+   - Sortieren der resultierenden beiden Teilarrays (WIE LÄUFT SORTIERUNG AB?!)
 
 NOCH MIT EINBAUEN!:
 - vom linken Rand aus: _erste_ Element des Arrays, das größer oder gleich dem Pivot-Element ist
