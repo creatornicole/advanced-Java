@@ -78,7 +78,99 @@ Entweder findet man so eine Übereinstimmung oder es kommt zu einem sogenannten 
 - Verbesserungsmöglichkeit: Muster bei Vergleich nicht komplett, sondern nur bis zu ersten Mismatch durchlaufen
   - Anzahl der Vergleiche verändert sich zu: O(M + N)
 
+## Knuth-Morris-Pratt (KMP)
 
+...unterscheidet sich zum naiven Verfahren in der Hinsicht, dass der Zeiger i auf die nächste zu vergleichende Textstelle gesetzt werden kann ohne diesen jemals zurückzusetzen.
+Dies geschieht, indem die Kenntnis über der Zeichen, im Muster, die mit den darüber stehenden Zeichen im Text übereingestimmt haben, bis ein Mismatch auftrat, bekannt ist.
+
+- Idee:
+  - Mismatch bei Vergleich Muster mit Text an j-ten Stelle
+  - so j-1 Zeichen zuvor übereingestimmt
+  - diese Info nutzen, um Muster soweit wie möglich nach rechts zu verschieben
+  - dabei darauf achten, dass kein Vorkommen im Text übersehen wird
+
+- Grundlegend: Erste Zeichen des Musters an Stelle, an der Mismatch auftrat, setzen
+  - Ausnahme: in zuvor durchgegangenen Substring befindet sich bereits Anfang des Musters, dann
+
+- Umsetzung
+  - mit Verschiebungstabelle
+  - bevor Vergleich begonnen wird, muss Verschiebungstabelle aufgestellt werden
+  - Grundprinzip der Verschiebungstabelle: Notieren an welcher Stelle (Index) in Muster, Zeichen bereits aufgetreten ist
+  - nach Aufstellen der Verschiebungstabelle kann Vergleich begonnen werden
+  - für Vergleich: jedes Zeichen des Musters mit an jeweils gerade befindlichen Zeichen des Textes vergleichen, bis Mismatch auftritt
+
+Bsp.:
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster | a | b | a | b | d |   |   |   |   |   |   |   |   |
+
+Zugehörige Verschiebungstabelle:
+| Index        | 0  | 1 | 2 | 3 | 4 | 5 | -> Länge des Musters
+|--------------|----|---|---|---|---|---|
+| Muster       |    | a | b | a | b | d |
+| Verschiebung | -1 | 0 | 0 | 1 | 2 | 0 |
+
+- -1 = Symbol für keine Verschiebung
+- 0 = Zeichen kommt zuvor in Muster noch nicht vor
+- 1 = Zeichen kommt zuvor in Muster an Index 1 vor
+- 2 = Zeichen kommt zuvor in Muster an Index 2 vor
+
+Vergleich anfangen
+| Text   | a | b | a | b | **c** | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|-------|---|---|---|---|---|---|---|---|
+| Muster | a | b | a | b | **d** |   |   |   |   |   |   |   |   |
+
+-> Mismatch tritt bei Vergleicht c mit d auf
+-> Mismatch also bei Index 4
+-> Laut Verschiebungstabelle erfolgt nun eine Verschiebung von 2 Stellen
+-> daraus ergibt sich:
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   | a | b | a | b | d |   |   |   |   |   |
+
+-> Mismatch tritt bereits bei Vergleich b mit a auf
+-> Mismatch also bereits an Index 0
+-> Verschiebungsindex = -1, d.h. 1 nach rechts (_1 Feld nach rechts ist immer dazu zu rechnen_)
+-> daraus ergibt sich:
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   | a | b | a | b | d |   |   |   |   |
+
+-> Mismatch tritt bereits bei Vergleich b mit a auf
+-> Mismatch also bereits an Index 0
+-> Verschiebungsindex = -1, d.h. 1 nach rechts
+-> daraus ergibt sich:
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   |   | a | b | a | b | d |   |   |   |
+
+-> Mismatch tritt bei Vergleich c mit a auf
+-> Mismatch also an Index 3
+-> Verschiebungsindex an Index 3 gleich 1
+-> daraus ergibt sich:
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   |   |   |   | a | b | a | b | d |   |
+
+-> Mismatch tritt bereits bei Vergleich c mit a auf
+-> Mismatch also bereits an Index 0
+-> Verschiebungsindex = -1, d.h. 1 nach rechts
+-> daraus ergibt sich:
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   |   |   |   |   | a | b | a | b | d |
+
+-> Muster stimmt mit Textabschnitt überein
+
+## Suche in statischen Texten
+
+...kann von einer gewissen Vorarbeit profitieren. So geht mit dem Verfahren zuvor auch die Überlegung einher, wie man effizient Indizes konstruieren kann.
 
 
 
