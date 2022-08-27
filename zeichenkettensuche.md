@@ -61,7 +61,7 @@
   - Knuth-Morris-Pratt (KMP)
   - Boyer-Moore
 
-### Naive Verfahren zur Textsuche
+## Naive Verfahren zur Textsuche
 
 ...sucht Muster in Text, indem man das Muster, beginnend beim ersten Zeichen des Textes, der Reihe nach an jeden Teilstring des Texte (mit Länge M) legt und zeichenweise von links nach rechts vergleicht.
 Entweder findet man so eine Übereinstimmung oder es kommt zu einem sogenannten Mismatch.
@@ -98,6 +98,8 @@ Dies geschieht, indem die Kenntnis über der Zeichen, im Muster, die mit den dar
   - Grundprinzip der Verschiebungstabelle: Notieren an welcher Stelle (Index) in Muster, Zeichen bereits aufgetreten ist
   - nach Aufstellen der Verschiebungstabelle kann Vergleich begonnen werden
   - für Vergleich: jedes Zeichen des Musters mit an jeweils gerade befindlichen Zeichen des Textes vergleichen, bis Mismatch auftritt
+  - bei Auftritt Mismatch, Muster je nach in Verschiebungstabelle befindlichen Faktor nach rechts verschieben (Aufpassen: by default schon immer 1 nach rechts, dass heißt Verschiebungsfaktor + 1 Positionen nach rechts)
+  - erneut vergleichen und immer so weiter
 
 Bsp.:
 
@@ -106,10 +108,10 @@ Bsp.:
 | Muster | a | b | a | b | d |   |   |   |   |   |   |   |   |
 
 Zugehörige Verschiebungstabelle:
-| Index        | 0  | 1 | 2 | 3 | 4 | 5 | -> Länge des Musters
-|--------------|----|---|---|---|---|---|
-| Muster       |    | a | b | a | b | d |
-| Verschiebung | -1 | 0 | 0 | 1 | 2 | 0 |
+| Index        | 0  | 1 | 2 | 3 | 4 | 5 | -> Länge des Musters |
+|--------------|----|---|---|---|---|---|----------------------|
+| Muster       |    | a | b | a | b | d |                      |
+| Verschiebung | -1 | 0 | 0 | 1 | 2 | 0 |                      |
 
 - -1 = Symbol für keine Verschiebung
 - 0 = Zeichen kommt zuvor in Muster noch nicht vor
