@@ -15,6 +15,12 @@
     - Intervall-Teilung bei sortierten Arrays
   - falls Zahl nicht in Array enthalten, -1 zurückliefern
 
+- allgemeine Aufgabenstellung
+  - in Array sind Datenstrukturen d0, d1, ... , dn-1 gespeichert
+  - Datenstrukturen besitzen Schlüsselwerte s0, s1, ... sn-1
+  - gesucht ist Index i, bei dem Datenstrukur mit bestimmten Schlüsselwert s gespeichert ist
+  - Fall keine Datenstruktur, wie gesucht, so Rückgabe -1
+
 ## Sequentielle/ Lineare Suche
 
 ...wird bei der Suche von Informationen in unsortierten Arrays angewendet.
