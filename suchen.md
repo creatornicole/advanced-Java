@@ -40,11 +40,42 @@
   3. Sobald gesuchtes Element gefunden wurde, gebe dieses aus
   4. Sollte Element nicht in Array vorhanden sein, gebe -1 bzw. Fehlerbenachrichtigung aus
 
-- Beispiel-Pseudocode
-  1. Übergabe Array _zahlen_ mit Zahlen und Übergabe gesuchter Zahl
-  2. i = 0
-  3. Durchlaufe Array solange _zahlen_[i] != gesucht, i++
-  4. Sobald zahlen[i] == gesucht, Rückgabe i
+Bsp.:
+
+```java
+  /**
+   * Sequentielle Suche in Array
+   *
+   * @param zahlen zu durchsuchendes Array
+   * @param gesucht gesuchte Zahl
+   */
+  public static int sequentiellSuchen(int[] zahlen, int gesucht) {
+    int i = 0;
+    while(zahlen[i] != gesucht) {
+      i++;
+    }
+    return i;
+  }
+
+  /**
+   * Sequentielle Suche in Array mit Rueckgabe -1,
+   * wenn Datenstruktur nicht vorhanden ist.
+   *
+   * @param zahlen zu durchsuchendes Array
+   * @param gesucht gesuchte Zahl
+   */
+  public static int sequentiellSuchenRueckgabe(int[] zahlen, int gesucht) {
+    int i = 0;
+    while((zahlen[i] != gesucht) && (i < (zahlen.length-1))) {
+      i++;
+    }
+    if(zahlen[i] != gesucht) {
+      return -1;
+    } else {
+      return i;
+    }
+  }
+```java
 
 ## Binäre Suche für sortierte Zahlen-Arrays
 
