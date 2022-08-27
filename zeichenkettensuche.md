@@ -217,3 +217,15 @@ Bsp.:
 - zwei Textarten
   - statisch -> Änderungen verhältnismäßig selten und geringfügig
   - dynamisch -> Änderungen verhältnismäßig häufig und erheblich
+- Suchalgorithmen für Suche in dynamischen Texten
+  - Naive Verfahren
+    - Legen Muster an jeden Teilstring des Textes
+    - Vergleich zeichenweise von links nach rechts
+  - Knuth-Morris-Pratt (KMP)
+    - berechnet mögliche Verschiebung des Musters nach rechts
+    - basierend auf zuvor übereinstimmenden Zeichen
+    - mit Verschiebungstabelle
+  - Boyer-Moore
+    - Anlegen Muster an Text erfolgt ebenso von links nach rechts
+    - Vergleichsrichtung jedoch von rechts nach links
+    - praktisch für kurze Zeichenfolge für viel Text -> mit Verfahren Muster oftmals um große Distanzen nach rechts verschieben möglich und somit nur einen Bruchteil der Textzeichen des Textes mit Muster vergleichen notwendig
