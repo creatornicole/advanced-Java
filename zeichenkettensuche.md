@@ -170,6 +170,37 @@ Vergleich anfangen
 
 -> Muster stimmt mit Textabschnitt überein
 
+## Boyer-Moore
+
+... unterscheidet sich von den bereits vorgestellten dynamischen Suchalgorithmen vor allem in dem Aspekt der Vergleichsrichtung des Musters mit dem aktuellen Textabschnitt.
+
+- Vergleich Zeichen Muster mit Zeichen im Text anders als bis jetzt bekannt von rechts nach links
+  - d.h. Vergleich Muster mit Text beginnt immer beim letzten Zeichen des Musters
+- dennoch Legen des Musters an Text von links nach rechts
+
+- bei Mismatch: Berechnung der Verschiebung des Musters
+  - Verschiebung von Zeichen abhängig machen, welches Mismatch zu verantworten hat (Vorkommen-Heuristik)
+  - tritt Zeichen an Position, an der Mismatch aufgetreten ist, nicht im Muster auf so um durchlaufene Zeichen nach rechts verschieben
+  - wenn Zeichen an Position, an der Mismatch aufgetreten ist, in Muster auftritt, so Muster soweit nach rechts verschieben, bis übereinstimmende Zeichen untereinanderstehen
+
+Bsp.:
+
+| e | r |   | s | a | g | t | e |   | a | b | r | a | k | a | d | a | b | r | a | , | a | b | e | r |   | n | i | c | h | t | s |   | g | e | s | c | h | a | h | . |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+
+
+- mit diesem Verfahren oftmals möglich, Muster große Distanzen nach rechts zu verschieben
+  - somit nur einen Bruchteil der Textzeichen des Textes mit Muster vergleichen nötig
+  - dennoch kein Vorkommen des Musters in Text übersehen
+
+
 ## Suche in statischen Texten
 
 ...kann von einer gewissen Vorarbeit profitieren. So geht mit dem Verfahren zuvor auch die Überlegung einher, wie man effizient Indizes konstruieren kann.
