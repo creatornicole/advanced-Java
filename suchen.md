@@ -75,7 +75,7 @@ Bsp.:
       return i;
     }
   }
-```java
+```
 
 ## Binäre Suche für sortierte Zahlen-Arrays
 
