@@ -99,6 +99,35 @@ Bsp.:
 
 - Aufwand: O(log2(n))
 
+Bsp.:
+```java
+  /**
+  	 * Rekursive Variante der binaeren Suche in Zahlen-Array durch Intervall-Teilung.
+  	 *
+  	 * @param zahlen zu durchsuchendes Array
+  	 * @param gesucht gesuchtes Element
+  	 * @param von Anfangsindex der Array-Suche
+  	 * @param bis Endindex der Array-Suche
+  	 * @return Index des Elements in uebergebenen Array
+  	 */
+  	public static int binSucheRekursiv(int[] zahlen, int gesucht, int von, int bis) {
+  		int pos = -1;
+  		if(von <= bis) {
+  			int mitte = (von + bis) / 2;
+  			if(gesucht > zahlen[mitte]) { //weitere Suche in rechten Teilarray
+  				pos = binSucheRekursiv(zahlen, gesucht, mitte+1, bis);
+  			} else {
+  				if(gesucht < zahlen[mitte]) { //weitere Suche in linken Teilarray
+  					pos = binSucheRekursiv(zahlen, gesucht, von, mitte-1);
+  				} else { //mittleres Element ist gesuchtes Element, keine weitere Suche notwendig
+  					pos = mitte;
+  				}
+  			}
+  		}
+  		return pos;
+  	}
+```
+
 ## Vergleich Lineare- und Binäre Suche
 
 - Binäre Suche effizienter
