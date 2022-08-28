@@ -126,6 +126,33 @@ Bsp.:
   		}
   		return pos;
   	}
+
+    /**
+    	 * Interative Variante der binaeren Suche in Zahlen-Array durch Intervall-Teilung.
+    	 *
+    	 * @param zahlen zu durchsuchendes Array
+    	 * @param gesucht gesuchtes Element
+    	 * @param von Anfangsindex der Array-Suche
+    	 * @param bis Endindex der Array-Suche
+    	 * @return Index des Elements in uebergebenen Array
+    	 */
+    	public static int binSucheIterativ(int[] zahlen, int gesucht, int von, int bis) {
+    		int pos = -1;
+    		int mitte = -1;
+    		do {
+    			mitte = (von + bis) / 2;
+    			if(gesucht > zahlen[mitte]) {
+    				von = mitte + 1;
+    			} else {
+    				if(gesucht < zahlen[mitte]) {
+    					bis = mitte - 1;
+    				} else {
+    					pos = mitte;
+    				}
+    			}
+    		} while((mitte != pos) && (von <= bis));
+    		return pos;
+    	}
 ```
 
 ## Vergleich Lineare- und Binäre Suche
