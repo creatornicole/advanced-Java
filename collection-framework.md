@@ -28,7 +28,7 @@ Bsp.:
 | Problem                                            | Lösung mit Framework                                    |
 |----------------------------------------------------|---------------------------------------------------------|
 | Alphabetisches Sortieren einer String-Liste        | Collections.sort(liste);                                |
-| -||- ohne Unterscheidung Groß- und Kleinschreibung | Collections.sort(liste, String.CASE_INSENSITIVE_ORDER); |
+| (siehe darüber) ohne Unterscheidung Groß- und Kleinschreibung | Collections.sort(liste, String.CASE_INSENSITIVE_ORDER); |
 | Ausgabe von Array-Elementen                        | System.out.println(Arrays.asList(a));                   |
 
 ## Überblick Interfaces
@@ -128,3 +128,24 @@ Bsp.: Implementierung einer nicht unterstützten Methode
     throw new UnsupportedOperationException();
   }
 ```
+
+## Zusammenfassung
+
+- Collection-Framework definiert eine einheitliche Architektur zur Darstellung und Bearbeitung von Sammlungen.
+- Ermöglicht es Aufgaben mit viel weniger Programm-Code zu erledigen.
+- Allgemeine Interfaces
+  - List -> Elemente in Reihenfolge, Zugriff über Positionsnummer -> ArrayList, LinkedList
+  - Set -> Mengen im Sinne der Mathematik (keine doppelten Elemente, ohne Reihenfolge) -> HashSet, LinkedHashSet
+  - SortedSet -> Mengen mit Ordnung der Elemente -> TreeSet
+- Zum Traversieren
+  - Iterable -> iterator() -> stellt Iterator zur Verfügung
+    - Iterator ermöglicht einfachen Zugriff auf jedes Element einer Collection
+  - Iterator -> Behälter durchlaufen
+  - ListIterator -> Liste in beide Richtungen durchlaufen
+- Für Warteschlangen-Behälter
+  - Queue -> einfügen nach bestimmter Regeln, entfernen nur von vorn -> LinkedList, PriorityQueue
+  - Deque -> zweiseitiger Stapel, Elemente also von beiden Seiten entnehmbar -> LinkedList, ArrayDeque
+- Für Abbildungs-Behälter
+  - Map -> Abbildungen im Sinn der Mathematik ("Schlüssel-Wert-Paare" ohne doppelte Schlüssel) -> HashMap, LinkedHashMap
+  - SortedMap -> Ordnung für Schlüssel-Elemente -> TreeMap
+- optionale Methoden der Interfaces verlangen werfen von _UnsupportedOperationException_
