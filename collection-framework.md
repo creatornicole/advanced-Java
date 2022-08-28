@@ -35,28 +35,28 @@ Bsp.:
 
 ...beschreiben häufig verwendete abstrakte Datentypen.
 
-Bsp.:
 - Iterable
   - Collection
     - Set -> Sorted Set
     - List
     - Queue -> Dequeue
-- Iterator
-  - ListIterator
-- Map
-  - SortedMap
+
+
 
 ### Allgemeine
-| Interfaces   | definiert Methode(n)...                                                                                               |
-|--------------|-----------------------------------------------------------------------------------------------------------------------|
-| Collection   | allgemeine für Behälter                                                                                               |
-| List         | für Behälter mit Elementen in einer bestimmten Reihenfolge, auf die über ihre Positionsnummer zugegriffen werden kann |
-| Set          | für Behälter ohne doppelte Elemente und ohne bestimmte Reihenfolge (Mengen im Sinn der Mathematik)                    |
-| SortedSet    | für Mengen mit einer Ordnung der Elemente (definiert durch Comparable bzw. Comparator)                                |
+| Interfaces   | definiert Methode(n)...                                                                                               | Standardimplementationen        |
+|--------------|-----------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| Collection   | allgemeine für Behälter                                                                                               |                                 |
+| List         | für Behälter mit Elementen in einer bestimmten Reihenfolge, auf die über ihre Positionsnummer zugegriffen werden kann | ArrayList, LinkedList, (Vector) |
+| Set          | für Behälter ohne doppelte Elemente und ohne bestimmte Reihenfolge (Mengen im Sinn der Mathematik)                    | HashSet, LinkedHashSet          |
+| SortedSet    | für Mengen mit einer Ordnung der Elemente (definiert durch Comparable bzw. Comparator)                                | TreeSet                         |
 
 ### Zum Traversieren
 
 ...zum Durchlaufen.
+
+- Iterator
+  - ListIterator
 
 | Interfaces   | definiert Methode(n) zum Traversieren...                |
 |--------------|---------------------------------------------------------|
@@ -65,23 +65,56 @@ Bsp.:
 | ListIterator | einer Liste in beide Richtungen                         |
 
 ### Für Warteschlange-Behälter
-| Interfaces | definiert Methode(n) für Warteschlangen-Behälter...                                                                                 |
-|------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Queue      | deren Elemente nach Regel eingefügt und nur von vorn entnommen werden kann                                                          |
-| Deque      | deren Elemente an beiden Enden nach der LIFO-Regel ("Last In - Firs Out") eingefügt und entnommen werden, quasi zweiseitiger Stapel |
+| Interfaces | definiert Methode(n) für Warteschlangen-Behälter...                                                                                 | Standardimplementationen  |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| Queue      | deren Elemente nach Regel eingefügt und nur von vorn entnommen werden kann                                                          | LinkedList, PriorityQueue |
+| Deque      | deren Elemente an beiden Enden nach der LIFO-Regel ("Last In - Firs Out") eingefügt und entnommen werden, quasi zweiseitiger Stapel | LinkedList, ArrayDeque    |
 
 - Deque = Double-Ended Queue = "Deck"
 
 ### Für Abbildungs-Behälter
-| Interfaces | definiert Methode(n) für Abbildungs-Behälter...                                                                                              |
-|------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Map        | in denen "Schlüssel-Wert-Paare" gespeichert werden können, wobei keine doppelten Schlüssel erlaubt sind (Abbildungen im Sinn der Mathematik) |
-| SortedMap  | mit einer Ordnung für die Schlüssel-Elemente (definiert durch Comparable bzw. Comparator)                                                    |
 
+- Map
+  - SortedMap
 
-## Standardimplementationen der Interfaces
+| Interfaces | definiert Methode(n) für Abbildungs-Behälter...                                                                                              | Standardimplementationen            |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| Map        | in denen "Schlüssel-Wert-Paare" gespeichert werden können, wobei keine doppelten Schlüssel erlaubt sind (Abbildungen im Sinn der Mathematik) | HashMap, LinkedHashMap, (Hashtable) |
+| SortedMap  | mit einer Ordnung für die Schlüssel-Elemente (definiert durch Comparable bzw. Comparator)                                                    | TreeMap                             |
 
 ## Interface Iterable<E>
+
+...stellt durch iterator()-Methode einen Iterator zur Verfügung.
+
+- Iterator ermöglicht
+  - einfachen Zugriff auf jedes Element einer Collection
+  - darunterliegende Datenstruktur wird versteckt
+- definiert Methoden zum Traversieren von Behältern
+
+```java
+//Iterator erstellen
+public Interface Iterable<E> {
+  Iterator<E> Iterator();
+}
+
+//Methoden zum Traversieren von Behältern
+public Interface Iterator<E> {
+  boolean hasNext();
+  E next();
+  void remove(); //optionale Methode, loescht zuletzt zurueckgegebenes Element
+}
+```
+
+## Effiziente Suche mit Collection-Framework erreichen
+
+...zielt darauf ab, möglichst schnell Elemente in einer Elementmenge zu finden (= Telefonbuchproblem).
+
+- Datenstrukturen aus Collection-Framework, die dabei helfen
+  - Hash-Table
+  - Hash-Map
+  - Dictionary
+  - assoziative Arrays
+- funktionieren nach Prinzip: Verallgemeinerung von Arrays
 
 ## Optionale Methoden
 
