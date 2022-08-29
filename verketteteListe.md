@@ -29,8 +29,6 @@
 
 ...ist eine Aneinanderreihung von Listenelementen (Knoten), wobei jedes Listenelement neben Inhalt und den Verweis auf das nächste Element auch einen Verweis auf das vorhergehende Listenelement beinhaltet.
 
-- LinkedList des Java-Collection-Frameworks ist als doppelt verkettete Ringliste realisiert
-
 - Grundbaustein: Listenelement
   - data -> Dateninhalt
   - next -> Verweis auf nächstes Listenelement
@@ -48,6 +46,7 @@
 |                                                                          | höherer Aufwand bei Manipulation der Liste                 |
 
 - Hinweis: komplettes Durchlaufen bei einfacher Liste auch nicht notwendig, wenn Referenz auf Ende dabei ist
+- LinkedList des Java-Collection-Frameworks ist als doppelt verkettete Ringliste realisiert
 
 ## Zusammenfassung
 
@@ -57,3 +56,13 @@
   - nur sequentiell Durchlaufen möglich
   - dabei Zugriff über erste Element
 - Doppelt verkettete Ringliste
+  - Listenelement beinhaltet: data, next, prev
+  - Vereinbarungen
+    - Dateninhalt != null (Ausnahme: Eintrittselement entry)
+    - Listenlänge als Attribut gespeichert
+    - entry dient nicht zur Datenspeicherung
+    - leere Liste = entry mit Verweisen auf sich selbst
+- Doppelt verkettete Ringliste
+  - schnelleres Einfügen am Ende
+  - jedoch höherer Speicherbedarf
+  - höherer Manipulationsaufwand
