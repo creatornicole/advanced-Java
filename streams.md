@@ -13,7 +13,11 @@
 ## Ein- und Ausgabestrom
 
 - Eingabestrom für schreiben von Daten aus Datenquelle in Programm
+  - "Bytes können von mir gelesen werden."
+  - hat Lesemethoden
 - Ausgabestrom für lesen von Daten aus Programm in Datensenke
+  - "Bytes können auf mich geschrieben werden."
+  - hat Schreibemethoden
 
 ## Verarbeitungsprinzip
 
@@ -38,7 +42,7 @@
 
 ...Paket java.io stellt umfangreiche Bibliothek zur Ein- und Ausgabe dar
 
-- Klassen für verschiedenartige Ströme
+### Klassen für verschiedenartige Ströme
   | Klasse       | Nutzen                                 | Standardimplementationen |
   |--------------|----------------------------------------|--------------------------|
   | InputStream  | Eingabestrom für Bytes (= Byte-Stream) |                          |
@@ -46,7 +50,19 @@
   | Reader       | Eingabestrom für Zeichen               | BufferedReader           |
   | Writer       | Ausgabestrom für Zeichen               | BufferedWriter           |
 
-- Interfaces für bestimmte Funktionalitäten
+- Methoden des InputStream
+| Methode            | Erklärung                                                                     |
+|--------------------|-------------------------------------------------------------------------------|
+| read()             | Liest einen Byte von InputStream                                              |
+| read(byte[] array) | Liest Bytes von InputStream und speichert diese in angegebenen Array          |
+| available()        | Gibt die Anzahl der Bytes, die im InputStream vorhanden sind, aus             |
+| mark()             | Markiert Position in InputStream, bis zu welchen zuletzt Daten gelesen wurden |
+| reset()            | Setzt Position auf zuletzt Markierte zurück                                   |
+| markSupported()    | Kontrollieren, ob mark() und reset() von InputStream unterstützt werden       |
+| skips()            | Überspringt angegebene Anzahl von Bytes des InputStreams                      |
+| close()            | Schließt InputStream                                                          |
+
+### Interfaces für bestimmte Funktionalitäten
   | Interface    | Definieren           |
   |--------------|----------------------|
   | DataInput    | Methoden zur Eingabe elementarer Datentypen sowie Zeichenketten |
@@ -55,7 +71,7 @@
   | ObjectOuput  |                      |
   | Serializable |                      |
 
-- Dienstklassen fpr spezielle Aufgaben
+### Dienstklassen fpr spezielle Aufgaben
   | Klasse            | Aufgabe                                                                                                                                                                                    |
   |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | File              | ...repräsentieren Java Dateien bzw. Verzeichnisse des Datei-Systems, ermöglichen Zugriff auf wichtigte Dateiattribute/-eigenschaften, dabei kein Bezug zu Dateiinhalt (für Inhalt Streams) |
@@ -82,9 +98,9 @@
   - bieten Methoden zum Lesen und Schreiben von 8-Bit Werten (Bytes) an
   - aus diesen selbst lassen sich jedoch keine Objekte erzeugen
   - es lassen sich nur Objekte aus bspw. folgenden Beispielkonstruktionen bilden
-    - FileInputStream (zur Eingabe in Programm)
+    - FileInputStream (Daten von Datei lesen)
     - ByteArrayInputStream (zur Eingabe in Programm)
-    - FileOutputStream (zur Ausgabe aus Programm)
+    - FileOutputStream (Daten in andere Datei schreiben)
 
 - Zwei Byte-Streamklassen für Objekt-Serialisierung
   - ObjectInputStream
