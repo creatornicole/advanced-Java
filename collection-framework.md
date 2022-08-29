@@ -71,6 +71,7 @@ Bsp.:
 | Deque      | deren Elemente an beiden Enden nach der LIFO-Regel ("Last In - Firs Out") eingefügt und entnommen werden, quasi zweiseitiger Stapel | LinkedList, ArrayDeque    |
 
 - Deque = Double-Ended Queue = "Deck"
+- LinkedList als doppelt verkettete Ringliste realisiert
 
 ### Für Abbildungs-Behälter
 
