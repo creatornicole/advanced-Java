@@ -22,3 +22,9 @@ Bsp.:
   - Arrays
   - Boolean
   - Null
+
+## Zusammenfassung
+
+- JSON = JavaScript Object Notation
+- kompakter als XML
+- primär für Webanwendungen und Apps
