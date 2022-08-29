@@ -43,7 +43,7 @@ Bsp.: Umsetzung mit Simple-JSON, **Unsaubere Umsetzung**
 
 ## JUnit
 
-... Framework zum Testen von Java Programmen.
+...Framework zum Testen von Java Programmen.
 
 - Berücksichtigung umfassender Akzeptanz- und Unit-Tests hat deutlich positiven Effekt auf Struktur der Software
   - da, um Modul/Anwendung testbar zu machen, diese geeignet entkoppelt sein muss
@@ -89,3 +89,8 @@ Bsp.: Grafische Darstellung von Funktionen/Abbildungen in Mathe
 - Bibliotheken erweitern Funktionalität von Java.
 - jede Bibliothek meist für einen speziellen Bereich
 - beliebteste Logging-Bibliothek: SLF4j
+- weitere bekannte Bibliotheken
+  - JSON -> zur JSON-Verarbeitung in Java
+  - JUnit -> zum Testen von Java Programmen
+  - Apache Commons -> _reusable components_ zur Verfügung stellen
+  - Guava
