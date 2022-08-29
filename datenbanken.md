@@ -31,3 +31,13 @@
 
 - places.sqlite für Firefox, Chrome, neuen Edge
 - enthält Infos über bspw.: Browserhistorie (moz_places)
+
+## Zusammenfassung
+
+- JDBC Bibliotheken zur Verbindung mit verschiedener Datenbanken
+- verschiedene Datenbanken benötigen unterschiedliche Bibliothek
+- Datenbankenarbeit in Java
+  - Verbindungsaufbau über Verbindungsmechanismus
+  - Senden SQL-Anweisung
+  - Verarbeitung der Anfrageergebnisse
+  - Ressourcenfreigabe
