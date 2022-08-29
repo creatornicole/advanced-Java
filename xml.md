@@ -67,3 +67,14 @@ Bsp.:
 | StAX        | Streaming API für XML, Zwischenweg DOM und SAX                                                                                                |
 | XLST        | extensible Stylesheet Language Transformation, tranformiert JSON-Dokument in neues Dokument (bspw.: pdf, txt)                                 |
 | XPath       | XML Path Language, ermöglicht durchlaufen Baum, um definierte Elemente/Attribute zu finden, ohne alle Elemente zu bearbeiten                  |
+
+## Zusammenfassung
+
+- XML = extensible markup language
+- dient Speicherung, Übertragung, Rekonstruktion von beliebigen Daten
+- leichter lesbar
+- Anwendungsfelder u.a.: Websites, Grafik, Web Services, Konfigurationen
+- XML-Dokument besteht aus Root-Element, welches alle anderen Elemente (Tags) mit eventuellen Attributen und Kindelementena, aber auch leere Elemente enthält.
+- Tags meist frei wählbar
+- Semantik = Inhalt sehr flexibel wählbar
+- Syntax = Grammatik sehr streng
