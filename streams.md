@@ -39,12 +39,12 @@
 ...Paket java.io stellt umfangreiche Bibliothek zur Ein- und Ausgabe dar
 
 - Klassen für verschiedenartige Ströme
-  | Klasse       | Nutzen                                 |
-  |--------------|----------------------------------------|
-  | InputStream  | Eingabestrom für Bytes (= Byte-Stream) |
-  | OutputStream | Ausgabestrom für Bytes (= Byte-Stream) |
-  | Reader       | Eingabestrom für Zeichen               |
-  | Writer       | Ausgabestrom für Zeichen               |
+  | Klasse       | Nutzen                                 | Standardimplementationen |
+  |--------------|----------------------------------------|--------------------------|
+  | InputStream  | Eingabestrom für Bytes (= Byte-Stream) |                          |
+  | OutputStream | Ausgabestrom für Bytes (= Byte-Stream) |                          |
+  | Reader       | Eingabestrom für Zeichen               | BufferedReader           |
+  | Writer       | Ausgabestrom für Zeichen               | BufferedWriter           |
 
 - Interfaces für bestimmte Funktionalitäten
   | Interface    | Definieren           |

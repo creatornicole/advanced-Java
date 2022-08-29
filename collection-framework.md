@@ -83,6 +83,11 @@ Bsp.:
 | Map        | in denen "Schlüssel-Wert-Paare" gespeichert werden können, wobei keine doppelten Schlüssel erlaubt sind (Abbildungen im Sinn der Mathematik) | HashMap, LinkedHashMap, (Hashtable) |
 | SortedMap  | mit einer Ordnung für die Schlüssel-Elemente (definiert durch Comparable bzw. Comparator)                                                    | TreeMap                             |
 
+- zu Map
+  - Zuordnung Wert ("Schlüssel") zu Argument -> (Wert/Schlüssel, Argument)
+  - Zuordnung Wert ("Schlüssel") zu mehreren Argumenten -> bspw. (Wert/Schlüssel, Set<Datentyp>)
+    - typische Anwendungen für Maps solche Form sind Verzeichnisse aller Art wie Lexika, Wörterbücher, Telefon- oder Adressbücher
+
 ## Interface Iterable<E>
 
 ...stellt durch iterator()-Methode einen Iterator zur Verfügung.
