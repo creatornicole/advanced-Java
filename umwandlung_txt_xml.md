@@ -19,14 +19,6 @@ public class XMLUmwandlung {
 	StreamResult out; //speichert Transformationsergebnis zwischen (kann XML, Text, HTMl oder andere Markup-Form sein)
 	TransformerHandler th; //wartet auf SAXContentHandler Schreibevents und transformiert diese zu Ergebnis
 
-
-	public static void main(String[] args) {
-		String filmdatei = "D:\\___\\studium\\IF21wS1-B\\2_weiterfuehrendeProgrammierung\\NEU\\praktika\\filme.txt";
-
-		XMLUmwandlung xmlTransformer = new XMLUmwandlung();
-		xmlTransformer.datenEinlesen(filmdatei);
-	}
-
 	public void datenEinlesen(String file) {
 		try {
 			in = new BufferedReader(new FileReader(file));
