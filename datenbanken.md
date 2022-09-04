@@ -8,7 +8,7 @@
 
 ## JDBC Treiber
 
-- Komponente, die einer Java Anwendung ermöglicht mit einer Datenbank zu interagieren
+...Komponente, die einer Java Anwendung ermöglicht mit einer Datenbank zu interagieren
 
 - JDBC Treibermanager unterliegt Java Anwendung
 - Treibermanager unterschiedlich
@@ -48,8 +48,20 @@
    - in Classpath von Eclipse-Projekt einbinden: Rechtsklick auf Projekt -> _Build path_ -> _Configure Build Path..._ -> Java Build Path -> Librariers -> Classpath -> Add External JARs... ->
    JDBC Treiber Datei in Dateiverzeichnis ausfindig machen und öffnen -> Apply and Close
 2. Verbindung zur Datenbank herstellen
+   - dafür entsprechenden Treiber über Class-Loader statisch einbinden
+   - über Connection-Objekt eigentliche Verbindung einrichten (dafür sqlite-Datei auf Rechner lokalisieren)  
+
 
 ## Auslesen von Informationen aus Datenbank
+
+1. Anfrage an Datenbank senden
+   - Statement-Objekt erzeugen
+   - Timeout vereinbaren, falls Datenbank nicht reagiert
+   - über Methode executeQuery() des Statement-Objektes Anfrage an Datenbank senden
+2. Antwort auswerten
+   - als Ergebnis der Anfrage erhält man Objekt der Klasse _ResultSet_
+   - Objekt auswerten
+   - gefundene Datensätze in Textdatei speichern
 
 ## Zusammenfassung
 
