@@ -6,7 +6,9 @@
 - keine universelle Bibliothek für alle Datenbankarten
   - sondern: je Datenbank eine Bibliothek
 
-## JDBC Arten
+## JDBC Treiber
+
+- Komponente, die einer Java Anwendung ermöglicht mit einer Datenbank zu interagieren
 
 - JDBC Treibermanager unterliegt Java Anwendung
 - Treibermanager unterschiedlich
@@ -27,10 +29,27 @@
 
 ## places.sqlite
 
-...Datenbanken des Browsers.
+...Datenbank des Browsers mit allen wichtigen Daten des Benutzers.
 
-- places.sqlite für Firefox, Chrome, neuen Edge
-- enthält Infos über bspw.: Browserhistorie (moz_places)
+- wohl wichtigste Datei für forensische Untersuchung des Browsers (für Firefox, Chrome, neuen Edge)
+
+- enthält alle wichtigen Daten eines Benutzers
+  - Lesezeichen
+  - Chronik (moz_places)
+  - Passwörter
+
+- je nach Betriebssystem wird Datei in Unterordner innerhalb Nutzerverzeichnis gespeichert
+
+## Verknüpfung zu Datenbank
+
+1. Einbindung JDBC-Treiber
+   - jeweiligen Datenbank-Treiber herunterladen
+   - ist Jar-Archiv-Datei
+   - in Classpath von Eclipse-Projekt einbinden: Rechtsklick auf Projekt -> _Build path_ -> _Configure Build Path..._ -> Java Build Path -> Librariers -> Classpath -> Add External JARs... ->
+   JDBC Treiber Datei in Dateiverzeichnis ausfindig machen und öffnen -> Apply and Close
+2. Verbindung zur Datenbank herstellen
+
+## Auslesen von Informationen aus Datenbank
 
 ## Zusammenfassung
 
