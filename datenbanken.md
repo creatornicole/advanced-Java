@@ -61,6 +61,11 @@
 2. Antwort auswerten
    - als Ergebnis der Anfrage erhält man Objekt der Klasse _ResultSet_
    - Objekt auswerten
+     - _ResultSet_ ist Tabelle von Daten aus Datenbank
+     - mit Cursor, der auf aktuelle Reihe/Zeile zeigt
+     - next-Methode bewegt Cursor zu nächster Zeile (kann nur vorwärts laufen)
+     - gibt _false_ zurück, wenn keine weiteren Reihen im _ResultSet_ Objekt mehr vorhanden sind, sodass _ResultSet_ ganz leicht wiederholend durchlaufen werden kann
+     - Werte über Index der Spalte (startet bei 1, effizienter) oder Spaltenbezeichnung erhalten
    - gefundene Datensätze in Textdatei speichern
 
 ## Zusammenfassung
