@@ -64,3 +64,44 @@ Strategien
 ![Beispiel Term-Baum](termbaum.PNG)
 
 ## Binäre Bäume
+
+
+## Binäre Suchbäume
+
+...ein binärer Baum ist ein binärer Suchbaum, wenn für jeden Knoten gilt:
+
+- Dateninhalte der Knoten seines linken Teilbaums sind alle kleiner als sein Dateninhalt
+- Dateninhalt der Knoten seines rechten Teilbaums sind alle größer  oder gleich als sein Dateninhalt
+
+- Einfügen: nach Prinzip eines binären Suchbaums einfügen
+  - Marke des inneren Knoten kleiner -> linken Teilbaum weiter abgehen
+  - Marke des innere Knoten größer/gleich -> rechten Teilbaum weiter abgehen
+  - Größenvergleich solange durchführen, bis kein Nachfolgerknoten mehr existiert
+  - an Stelle, an der kein Nachfolgerknoten mehr existiert, einfügen
+- LÖschen: gelöschtes Element muss durch nächstkleineres Element ersetzt werden
+  - wird Blatt gelöscht, so muss keine Veränderung vorgenommen werden, sondern es muss wirklich nur der Knoten mit dem Wert gelöscht werden
+  - wird innerer Knoten gelöscht, so muss im rechten Teilbaum kleinste Element gesucht werden - dieses kleinste Element ersetzt zu löschenden Knoten
+  - wird innerer Knoten gelöscht und exisitiert nur ein weiterer Teilbaum danach, so mit nächsten Wert des Teilbaums ersetzen
+- Wurzel soll gelöscht werden, so unterscheidet man drei Fälle
+  - linker Teilbaum leer: Wurzel ersetzen durch Wurzel des rechten Teilbaums
+  - rechter Teilbaum leer: Wurzel ersetzen durch Wurzel des linken Teilbaums
+  - beide Teilbäume nicht leer:
+    - aus rechten Teilbaum Knoten mit minimalem Dateninhalt löschen, Dateninhalt in Wurzel übernehmen
+    - aus linken Teilbaum Knoten mit maximalem Dateninhalt lösche, Dateninhalt in Wurzel übernehmen
+- Suchen eines Wertes: ständiger "Größer-Kleiner-Gleich-Vergleich" mit Wurzel
+
+## Zusammenfassung
+
+- nichtlineare Datenstrukturen für flexibles und effizientes Einfügen, Löschen und Suchen
+- am meisten in Informatik: Bäume dessen Knoten Werte in Form von Daten bzw. Datenstrukturen zugeordnet sind
+- Darstellungsmöglichkeiten
+  - analog zu Listen (zu speichernden Datenstrukturen durch Referenzen auf Nachfolgerknoten und/oder Vorgängerknoten ergänzen)
+  - Array mit Indizes statt Referenzen (zwei Referenzen: linkes Kind und rechte Geschwister)
+- Traversierungsstrategien
+  - Pre-Order: Wurzel -> links -> rechts
+  - In-Order: links -> Wurzel -> rechts
+  - Post-Order: links -> rechts -> Wurzel
+- Term-Bäume stellen mathematische Ausdrücke eindeutig dar, indem den Operatoren ihre Operanden explizit zugeordnet werden
+- Binäre Suchbäume
+  - Marke der Knoten des linken Teilbaums kleiner als Wurzel
+  - Marke der Knoten des rechten Teilbaums größer/gleich Wurzel
