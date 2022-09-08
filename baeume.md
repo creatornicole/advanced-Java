@@ -65,6 +65,14 @@ Strategien
 
 ## Binäre Bäume
 
+...sind die am häufigsten verwendete Unterart der Bäume.
+
+- Binärbaum kann zwei Form annehmen
+  - leer
+  - bestehend aus Wurzel mit linkem und rechtem Teilbaum, die wiederum Binärbäume sind
+- alle Knoten nur maximal zwei direkte Nachkommen
+  - Kindknoten lassen sich eindeutig in linkes und rechtes Kind einteilen
+- Teilbaum leer? -> Kindknoten ist fehlend
 
 ## Binäre Suchbäume
 
@@ -102,6 +110,6 @@ Strategien
   - In-Order: links -> Wurzel -> rechts
   - Post-Order: links -> rechts -> Wurzel
 - Term-Bäume stellen mathematische Ausdrücke eindeutig dar, indem den Operatoren ihre Operanden explizit zugeordnet werden
-- Binäre Suchbäume
+- Binäre Suchbäume sind binäre Bäume, für dessen Knoten folgendes gilt...
   - Marke der Knoten des linken Teilbaums kleiner als Wurzel
   - Marke der Knoten des rechten Teilbaums größer/gleich Wurzel
