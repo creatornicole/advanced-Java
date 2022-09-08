@@ -109,7 +109,8 @@ Strategien
   - Pre-Order: Wurzel -> links -> rechts
   - In-Order: links -> Wurzel -> rechts
   - Post-Order: links -> rechts -> Wurzel
-- Term-Bäume stellen mathematische Ausdrücke eindeutig dar, indem den Operatoren ihre Operanden explizit zugeordnet werden
+- Knoten von Binärbäumen haben höchstens zwei Nachkommen
+- Termbäume stellen mathematische Ausdrücke eindeutig dar, indem den Operatoren ihre Operanden explizit zugeordnet werden
 - Binäre Suchbäume sind binäre Bäume, für dessen Knoten folgendes gilt...
   - Marke der Knoten des linken Teilbaums kleiner als Wurzel
   - Marke der Knoten des rechten Teilbaums größer/gleich Wurzel
