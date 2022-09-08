@@ -8,18 +8,18 @@
 
 ## Grundbegriffe
 
-| Begriff | Erklärung |
-|---------|-----------|
-| Tiefe des Knotens  | auch Ebene oder Niveaus des Knotens ist Länge des Weges von der Wurzel zu einem Knoten (Wurzel hat Tiefe 0) |
-| Höhe des Baumes | größte Knoten-Tiefe eines Baumes |
-| Marke | Wert, der einem Knoten eines Baumes zugeordnet ist |
-| Markierter Baum | Baum dessen Knoten Werte zugeordnet sind |
-| Eltern-/Vater(knoten) | Vorgängerknoten eines Knoten |
-| Kind(knoten) | Nachfolger-Knoten eines Knoten |
-| Pfad/ Weg | Kantenfolgen (Länge des Pfades/des Weges ist Anzahl der Kanten bzw. Anzahl der Knoten -1) |
-| Teilbaum | auch Unterbaum heißt jeder Teil eines Baums, der selbst ein Baum ist |
-| Blatt | Knoten ohne Nachfolger |
-| Innere Knoten | alle Knoten, die keine Blätter sind |
+| Begriff                      | Erklärung                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Tiefe des Knotens            | auch Ebene oder Niveaus des Knotens ist Länge des Weges von der Wurzel zu einem Knoten (Wurzel hat Tiefe 0) |
+| Höhe des Baumes              | größte Knoten-Tiefe eines Baumes                                                                            |
+| Marke                        | Wert, der einem Knoten eines Baumes zugeordnet ist                                                          |
+| Markierter Baum              | Baum dessen Knoten Werte zugeordnet sind                                                                    |
+| Eltern-/Vater(knoten)        | Vorgängerknoten eines Knoten                                                                                |
+| Kind(knoten)                 | Nachfolger-Knoten eines Knoten                                                                              |
+| Pfad/ Weg                    | Kantenfolge (Länge des Pfades/des Weges ist Anzahl der Kanten bzw. Anzahl der Knoten - 1)                   |
+| Teilbaum                     | auch Unterbaum heißt jeder Teil eines Baums, der selbst ein Baum ist                                        |
+| Blatt                        | Knoten ohne Nachfolger                                                                                      |
+| Innere Knoten                | alle Knoten, die keine Blätter sind (Knoten mit Nachfolgerknoten)                                           |
 
 ## Bäume als spezielle Graphen
 
@@ -41,9 +41,9 @@
 - Klammerung und Vorrang-Regeln werden durch Term-Bäume überflüssig
 
 - Operatoren (Rechenzeichen) = Marke der inneren Knoten
-- Operanden (Zahlen) zu Operator sind Teilbäume, die in Nachfolgerknoten beginnen
+- Operanden (Zahlen) zu Operator sind Teilbäume, die in Nachfolgerknoten (Kindknoten) beginnen
 - Konstanten = Marke der Blätter
 
-![Beispiel Term-Baum]("termbaum.PNG");
+![Beispiel Term-Baum](termbaum.PNG)
 
 ## Binäre Bäume
