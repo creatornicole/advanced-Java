@@ -32,7 +32,24 @@
 
 ## Darstellungsmöglichkeiten
 
+- zu speichernden Datenstrukturen durch Referenzen auf Nachfolgerknoten und/oder Vorgängerknoten ergänzt
+  - Referenzen sind dabei die Kanten
+  - analog zu Listen
+- bei speziellen Baumstrukturen: Datenstrukturen in Arrays
+  - dabei Indizes anstelle von Referenzen
+  - Problem: variable Anzahl von Nachfolgerknoten erfordert im Allgemeinen Array von Referenzen
+  - Ausweg: Darstellung mit zwei Referenzen: _linkes Kind_ und _rechte Geschwister_
+
 ## Traversierung
+
+...systematisches Durchlaufen der Knoten.
+
+Strategien
+| Bezeichnung | Übersetzung | Prinzip                                                                        |
+|-------------|-------------|--------------------------------------------------------------------------------|
+| Pre-Order   | Vorordnung  | verarbeite Wurzel -> verarbeite linken Teilbaum -> verarbeite rechten Teilbaum |
+| In-Order    | Inordnung   | verarbeite linken Teilbaum -> verarbeite Wurzel -> verarbeite rechten Teilbaum |
+| Post-Order  | Nachordnung | verarbeite linken Teilbaum -> verarbeite rechten Teilbaum -> verarbeite Wurzel |
 
 ## Term-Bäume
 
