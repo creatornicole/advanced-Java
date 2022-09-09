@@ -60,7 +60,7 @@
 - Graphen bestehen aus Knotenmenge V (Vertex) und Kantenmenge E (Edge)
 - man unterscheidet gerichteten- und ungerichteten Graphen
 - lassen sich unterschiedlich darstellen
-  - Kanten-Menge (Angabe Gesamtanzahl Knoten, Katen, Knotenpaare)
+  - Kanten-Menge (Angabe Gesamtanzahl Knoten, Kanten, Knotenpaare)
   - Matrix (Zeilen-, Spaltenanzahl Matrix = Knotenanzahl)
   - Liste (zu jeden Knoten Liste von Nachbarknoten vermerken)
 - Minimum Spanning Tree (MST) = minimaler Teilgraph eines ungerichteten Graphen mit gewichteten Kanten, welcher einen Baum mit allen Knoten des Graphen darstellt
