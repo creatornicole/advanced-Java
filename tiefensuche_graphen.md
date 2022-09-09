@@ -16,9 +16,10 @@
 - markiere aktuellen Knoten v als besucht
 - besuche anschließend rekursiv alle noch nicht markierten Nachbarknoten von v
 
-- dafür bieten sich folgenden Datenstrukturen an:
-| Datenstruktur | Anwendung |
-|---------------|-----------|
+- dafür bieten sich folgenden Datenstrukturen an
+
+| Datenstruktur          | Anwendung                                 |
+|------------------------|-------------------------------------------|
 | Boolean-Array marked[] | hilft beim Markieren der besuchten Knoten |
 | Integer-Array edgeTo[] | zeichnet Pfad auf                         |
 
@@ -43,5 +44,13 @@
 
 ## Zusammenfassung
 
+- Anwendung Tiefensuche
+  - alle Knoten, die mit bestimmten Knoten im Graphen verbunden sind, finden
+  - Pfad zwischen zwei Knoten finden
+- dafür verwendete Datenstrukturen
+  - Boolean-Array marked[] -> hilft beim Markieren der besuchten Knoten
+  - Integer-Array edgeTo[] -> zeichnet Pfad auf
+    - edgeTo[w] == v heißt, dass Knoten w über v besucht wurde
 - Eigenschaften
   - Korrektheit: Knoten w markiert <=> Knoten w mit Startknoten s verbunden
+  - Laufzeit: jeder mit s verbundene Knoten wird genau einmal besucht
