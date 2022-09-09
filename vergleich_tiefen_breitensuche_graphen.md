@@ -11,19 +11,21 @@
 | Speicherbedarf abhängig von Struktur Baums/Graphens, jedoch maximaler Speicher = Tiefe des Baums | Speicherbedarf ebenfalls abhängig von Struktur des Baums/Graphen, jedoch maximaler Speicher = Breite des Baums |
 
 
-Reihenfolge Tiefensuche
+Reihenfolge Tiefensuche\
 ![Reihenfolge Tiefensuche](reihenfolge-tiefensuche.PNG)
 
-- Zusammenhängende Komponenten in einem Graphen finden
-- finden von stark verbundenen Komponenten in einem Graphen
-- Rätsel lösen mit nur einer Lösung (wie Labyrinth)
+- für bspw.
+  - Zusammenhängende Komponenten in einem Graphen finden
+  - finden von stark verbundenen Komponenten in einem Graphen
+  - Rätsel lösen mit nur einer Lösung (wie Labyrinth)
 
-Reihenfolge Breitensuche
+Reihenfolge Breitensuche\
 ![Reihenfolge Breitensuche](reihenfolge-breitensuche.PNG)
 
-- Suche nach kürzesten Weg zwischen zwei Knoten
-- MST (Minimum Spanning Tree = Minimaler Spannbaum) für ungewichtete Graphen ermitteln
-- De-/Serialisierung binärer Bäume
+- für bspw.
+  - Suche nach kürzesten Weg zwischen zwei Knoten
+  - MST (Minimum Spanning Tree = Minimaler Spannbaum) für ungewichtete Graphen ermitteln
+  - De-/Serialisierung binärer Bäume
 
 ## Zusammenfassung
 
