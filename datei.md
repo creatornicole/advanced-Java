@@ -29,6 +29,13 @@
   - Rechte
   - Eigentümer
 
+## Möglichkeiten um aus Datei zu lesen
+
+- Scanner
+  - scannt Text
+  - kann elementare Datentypen und Zeichenketten analysieren
+  - nutzt dafür reguläre Ausdrücke
+
 ## Zusammenfassung
 
 - Datei ist...
