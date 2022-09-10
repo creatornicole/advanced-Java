@@ -62,3 +62,16 @@ Notizen basierend auf [Studyflix Beitrag](ht.tps://studyflix.de/informatik/dijks
 
 - ablesen erfolgt rekursiv
 - Bsp.: Knoten E erreicht man über Vorgänger C, diesen erreicht man am besten über B und dorthin kommt man direkt über den Startknoten A, somit ist der kürzeste Weg vom Startknoten A zu E über Knoten B und C
+
+## Zusammenfassung
+
+- Dijsktra-Algorithmus dient dazu, den kürzesten Weg ausgehend vom Startknoten zu beliebigen Knoten in Baum/Graph zu finden
+- dafür: gerichteter Graph, gewichtet, Kantengewichte nicht negativ
+- Durchführung
+  - Tabelle anlegen
+    - erste Spalte Iteration
+    - jede weitere mit Knoten, für den jeweils Kosten und Vorgänger notiert werden
+  - Warteschlange erstellen, in denen zu besuchende Knoten warten
+  - im Allgemeinen Knoten aus Warteschlange mit geringsten Kosten nehmen
+  - von diesem Knoten direkte Nachfolger betrachten und je nachdem Tabelle (Kosten und Vorgänger) aktualisieren (wenn besser)
+  - solange durchführen, bis Warteschlange leer
