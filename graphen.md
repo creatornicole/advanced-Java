@@ -30,6 +30,10 @@
 - Kanten-Menge
   - Angabe der Gesamtanzahl von Knoten und Kanten
   - zudem Angabe der Paarungen von Knoten, welche verbunden sind
+- Nachbarschaftsliste
+  - ähnlich zu Kanten-Menge
+  - jedoch zu jedem vorhandenen Knoten verbundenen Knoten speichern
+  ![Nachbarschaftsliste](nachbarschaftsliste.PNG)
 - Matrix
   - Matrixschreibweise für Knoten
   - 2-dimensionales Knoten-zu-Knoten boolsches Feld bzw. Integer Feld (Integer bei Gewichtung) (= Adjazenzmatrix)
