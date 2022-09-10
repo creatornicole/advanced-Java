@@ -30,10 +30,7 @@
 - Kanten-Menge
   - Angabe der Gesamtanzahl von Knoten und Kanten
   - zudem Angabe der Paarungen von Knoten, welche verbunden sind
-- Nachbarschaftsliste
-  - ähnlich zu Kanten-Menge
-  - jedoch zu jedem vorhandenen Knoten verbundenen Knoten speichern
-  ![Nachbarschaftsliste](nachbarschaftsliste.PNG)
+  ![Kanten-Menge](kantenmenge.PNG)
 - Matrix
   - Matrixschreibweise für Knoten
   - 2-dimensionales Knoten-zu-Knoten boolsches Feld bzw. Integer Feld (Integer bei Gewichtung) (= Adjazenzmatrix)
@@ -41,8 +38,9 @@
   - boolsche Feld -> wenn Knoten miteinander verbunden sind, also eine Kante vorhanden ist, so _1_, wenn nicht, so _0_
   - siehe anhand Beispiel, dass identische Kanten in Matrix gespeichert werden
   ![Adjazenzmatrix](adjazenzmatrix.PNG)
-- Liste
+- Liste (Nachbarschaftsliste)
   - jeder Knoten enthält Liste von verbundenen Knoten (den Nachbarknoten)
+  ![Nachbarschaftsliste](nachbarschaftsliste.PNG)
 
 ## Minimum Spanning Tree (MST)
 
