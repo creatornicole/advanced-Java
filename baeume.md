@@ -94,7 +94,7 @@ Strategien
   - linker Teilbaum leer: Wurzel ersetzen durch Wurzel des rechten Teilbaums
   - rechter Teilbaum leer: Wurzel ersetzen durch Wurzel des linken Teilbaums
   - beide Teilbäume nicht leer:
-    - aus rechten Teilbaum Knoten mit minimalem Dateninhalt löschen, Dateninhalt in Wurzel übernehmen
+    - aus rechten Teilbaum Knoten mit minimalem Dateninhalt löschen, Dateninhalt in Wurzel übernehmen oder
     - aus linken Teilbaum Knoten mit maximalem Dateninhalt lösche, Dateninhalt in Wurzel übernehmen
 - Suchen eines Wertes: ständiger "Größer-Kleiner-Gleich-Vergleich" mit Wurzel
 
