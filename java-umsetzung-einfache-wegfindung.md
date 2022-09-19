@@ -7,7 +7,7 @@
 
 ## Prinzip
 
-![Grundlegende Berechnung zum Weg finden](prinzip-einfacheWegfindung.md)
+![Grundlegende Berechnung zum Weg finden](prinzip-einfacheWegfindung.PNG)
 
 ## Umsetzung
 
