@@ -3,6 +3,10 @@
 ## Inhalt
 
 1. Ein-/Ausgabe
+   <details>
+    <summary>Datei</summary>
+    - Test
+   </details>
 2. Suchen/Sortieren
 3. Datenstrukturen
 4. Bäume/Graphen
