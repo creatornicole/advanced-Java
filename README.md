@@ -91,6 +91,14 @@
 
    <details>
     <summary>De-/Serialisierung</summary>
+
+    - um Objekte über Laufzeit hinaus verwenden zu können
+    - Serialisierung ermöglicht Objekte zu speichern
+    - Deserialisierung ermöglicht zuvor gespeichertes Objekt zu späteren Zeitpunkt wieder zu laden
+    - für Serialisierung Verschachtelung von Streams mit Byte-Streamklassen
+      - ObjectOutputStream -> Serialisierung
+      - ObjectInputStream -> Deserialisierung
+
    </details>
 
 2. Suchen/Sortieren

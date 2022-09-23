@@ -18,7 +18,7 @@
 | Reader           |  |
 | Writer           |  |
 | ObjectInputStream | Byte-Streamklasse zur Objekt-Serialisierung |
-| ObjectOutputStream | Byte-Streamklasse zur Objektserialisierung |
+| ObjectOutputStream | Byte-Streamklasse zur Objekt-Serialisierung |
 
 
 
