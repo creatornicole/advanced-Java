@@ -26,6 +26,21 @@
    </details>
    <details>
     <summary>RAF</summary>
+
+    = Random Access File
+    - ermöglicht wahlfreien Zugriff auf Datei zur Ein- und Ausgabe
+    - dafür Dateizeiger an entsprechende Position setzen
+      - Dateizeiger Typ long
+      - zeigt auf Byte, bei dem nächste Dateizugriff beginnt
+      - Anfänge elementarer Datenelemente berechenbar
+      - Anfänge anderer Datenelemente in extra Index-Datei speichern notwendig
+      - getFilePointer() -> Abfrage aktuellen Dateizeigers
+      - seek(long pos) -> Dateizeiger an angegebene Position setzen
+    - implementiert Interfaces
+      - DataInput -> read-Methoden
+      - DataOutput -> write-Methoden
+    - RAF nach Benutzung schließen
+
    </details>
    <details>
     <summary>De-/Serialisierung</summary>
