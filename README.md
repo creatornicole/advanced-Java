@@ -2,6 +2,10 @@
 
 ## Inhalt
 
+1. Ein-/Ausgabe
+2. Suchen/Sortieren
+3. Datenstrukturen
+4. Bäume/Graphen
 
 ## Reference
 
