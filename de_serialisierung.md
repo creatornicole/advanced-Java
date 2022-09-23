@@ -121,6 +121,7 @@ public class Deseri {
 ## Zusammenfassung
 
 - um Objekte über Laufzeit hinaus verwenden zu können
+- zur Serialisierung muss zu serialisierendes Objekt Interface Serializable implementieren
 - Serialisierung ermöglicht Objekte zu speichern
 - Deserialisierung ermöglicht zuvor gespeichertes Objekt zu späteren Zeitpunkt wieder zu laden
 - für Serialisierung Verschachtelung von Streams mit Byte-Streamklassen

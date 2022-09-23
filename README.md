@@ -93,6 +93,7 @@
     <summary>De-/Serialisierung</summary>
 
     - um Objekte über Laufzeit hinaus verwenden zu können
+    - zu serialisierendes Objekt muss Interface Serializable implementieren
     - Serialisierung ermöglicht Objekte zu speichern
     - Deserialisierung ermöglicht zuvor gespeichertes Objekt zu späteren Zeitpunkt wieder zu laden
     - für Serialisierung Verschachtelung von Streams mit Byte-Streamklassen
