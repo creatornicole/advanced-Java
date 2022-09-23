@@ -5,6 +5,12 @@
 1. Ein-/Ausgabe
    <details>
     <summary>Datei</summary>
+    - Dateien wie Array auf Speichermedium
+    ### Dateizeiger
+    - Zugriff durch Dateizeiger (file pointer)
+    - beim Lesen/Schreiben wird file pointer um entsprechende Anzahl Bytes versetzt
+    ### Möglichkeiten Datei auslesen
+    - Scanner Klasse
    </details>
    <details>
     <summary>Dateiarbeit</summary>
@@ -58,7 +64,7 @@
      <summary>Tiefen-/Breitensuche</summary>
     </details>
 
-## Reference
+## Referenz
 
 Hauptquelle: Modul 21061 Einführung in die Informatik ||: Weiterführende Programmierung gelehrt von Knut Altroggen an der Hochschule Mittweida
 Abbildungen: ebd.

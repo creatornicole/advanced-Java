@@ -42,6 +42,7 @@
   - Menge von logisch zusammengehörenden Daten
   - permanent auf geeigneten Medium gespeichert
   - identifizierbar über Bezeichner
+- Zugriff über Dateizeiger (file pointer)
 - Datei besteht aus Header, Content und Footer
 - Datei hat Dateiattribute
   - auch als Metadaten bezeichnet
