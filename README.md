@@ -91,6 +91,12 @@
 - FileSystem
 - Path
 - Files
+- RandomAccessFile (implementiert DataInput und DataOutput)
+
+## Wichtige Interfaces zu Themenbereichen
+
+- DataInput
+- DataOutput
 
 ## Referenz
 
