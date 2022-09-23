@@ -29,6 +29,10 @@
 | [FileSystem](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html) |                 |
 | [File](https://docs.oracle.com/javase/7/docs/api/java/io/File.html)                   |                 |
 | [Files](https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html)           |                 |
+| [FileOutputStream](https://docs.oracle.com/javase/7/docs/api/java/io/FileOutputStream.html) |           |
+| [FileInputStream](https://docs.oracle.com/javase/7/docs/api/java/io/FileInputStream.html)   |           |
+| [BufferedReader](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)     |           |
+| [FileReader](https://docs.oracle.com/javase/7/docs/api/java/io/FileReader.html)             |           |
 
 ## Interfaces
 
