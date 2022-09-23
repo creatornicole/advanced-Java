@@ -4,9 +4,11 @@
 1. Ein-/Ausgabe
    <details>
     <summary>Datei</summary>
-    - Dateien wie Array auf Speichermedium\
-    - Zugriff durch Dateizeiger (file pointer), welcher sich um entsprechende Anzahl Bytes beim Lesen/Schreiben versetzt\
-    - Möglichkeiten Datei auslesen: Scanner Klasse\
+
+    - Dateien wie Array auf Speichermedium
+    - Zugriff durch Dateizeiger (file pointer), welcher sich um entsprechende Anzahl Bytes beim Lesen/Schreiben versetzt
+    - Möglichkeiten Datei auslesen: Scanner Klasse
+
    </details>
    <details>
     <summary>Dateiarbeit</summary>
