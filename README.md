@@ -1,16 +1,15 @@
 # advanced-Java
 
 ## Inhalt
-
 1. Ein-/Ausgabe
    <details>
     <summary>Datei</summary>
     - Dateien wie Array auf Speichermedium
-    ### Dateizeiger
-    - Zugriff durch Dateizeiger (file pointer)
-    - beim Lesen/Schreiben wird file pointer um entsprechende Anzahl Bytes versetzt
-    ### Möglichkeiten Datei auslesen
-    - Scanner Klasse
+    - Dateizeiger
+      - Zugriff durch Dateizeiger (file pointer)
+      - beim Lesen/Schreiben wird file pointer um entsprechende Anzahl Bytes versetzt
+    - Möglichkeiten Datei auslesen
+      - Scanner Klasse
    </details>
    <details>
     <summary>Dateiarbeit</summary>
