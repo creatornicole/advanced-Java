@@ -206,6 +206,8 @@ public static String liesAus(String dateiname, int n) {
 ## Zusammenfassung
 
 - RAF = RandomAccessFile
-- Dien0stklasse des java.io Package zum wahlfreien Zugriff auf Datei mittels Dateizeiger
+- Dienstklasse des java.io Package zum wahlfreien Zugriff auf Datei mittels Dateizeiger
 - dafür Dateizeiger an entsprechende Position setzen
+  - Typ long
+  - für elementare Datentypen berechenbar
 - Speichern von unterschiedlich großen Datenelementen mithilfe von extra Index-Datei, die Dateizeiger auf Daten enthält
