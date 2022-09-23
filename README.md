@@ -10,11 +10,19 @@
     - Möglichkeiten Datei auslesen: Scanner Klasse
 
    </details>
+
    <details>
     <summary>Dateiarbeit</summary>
    </details>
+
    <details>
-    <summary>NIO</summary>
+    <summary>NIO (New Input Output)</summary>
+
+    - = New Input Output = Ersatz/Erweiterung für IO-Konzepte in Java durch Klassen unter java.nio.file
+    - FileSystem
+    - Path -> **zentrale Klasse**, repräsentiert Pfad/Datei in System, dadurch ganz einfaches kopieren/verschieben von Datei (auch von Webserver)
+    - Files -> zur Verfügung stellen von Routineoperationen wie kopieren und löschen
+
    </details>
    <details>
     <summary>RAF</summary>
