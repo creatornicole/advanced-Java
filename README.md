@@ -12,7 +12,41 @@
    </details>
 
    <details>
-    <summary>Dateiarbeit</summary>
+    <summary>Streams</summary>
+
+    - Datenströme, über welche Datenaustausch erfolgt (abstrakes Konstrukt mit Fähigkeit Zeichen auf imaginäres Ausgabegerät zu schreiben und von diesem zu lesen)
+    - Eingabestrom = InputStream = Reader
+    - Ausgabestrom = OutputStream = Writer
+
+    - Klassen für verschiedenartige Ströme
+      - InputStream
+      - OutputStream
+      - Reader
+      - Writer
+    - Interfaces für bestimmte Funktionalitäten
+      - DataInput
+      - DataOutput
+      - ObjectInput
+      - ObjectOutput
+      - Serializable
+    - Dienstklassen für bestimmte Aufgaben
+      - File
+      - RandomAccessFile
+    - Byte-Streamklassen zur Objektserialisierung
+      - ObjectInputStream (Kindklassen: FileInputStream, ByteArrayInputStream)
+      - ObjectOutputStream (Kindklassen: FileOutputStream)
+
+
+   </details>
+
+   <details>
+    <summary>Exceptions</summary>
+
+    - verschiedene IOExceptions beachten!
+    - zwei Behandlungsmöglichkeiten
+      - Abfangen durch try-catch-Anweisung
+      - Weiterleiten durch throws-Deklaration
+
    </details>
 
    <details>
@@ -42,9 +76,23 @@
     - RAF nach Benutzung schließen
 
    </details>
+
+   <details>
+    <summary>URL und URLConnection</summary>
+
+    - URL-Klasse repräsentiert Ressource im World Wide Web
+    - URLConnection-Klasse besitzt Methoden, die einen von der Ressource der URL lesen und auf diesen schreiben lassen
+    - Daten einer URL lesen
+      - URL-Objekt des Webdokuments erstellen
+      - Webdokument.openStream() (ist InputStream zum Auslesen)
+      - Files.copy(InputStream in, Path target, CopyOptions option) (zum Kopieren aller Bytes eines InputStreams in Datei)
+
+   </details>
+
    <details>
     <summary>De-/Serialisierung</summary>
    </details>
+
 2. Suchen/Sortieren
     <details>
      <summary>Suchen</summary>
@@ -91,12 +139,24 @@
 - FileSystem
 - Path
 - Files
+- File
 - RandomAccessFile (implementiert DataInput und DataOutput)
+- URL
+- URLConnection
+- InputStream
+- OutputStream
+- Reader
+- Writer
+- ObjectInputStream (Bsp.: FileInputStream)
+- ObjectOutputStream (Bsp.: FileOutputStream)
 
 ## Wichtige Interfaces zu Themenbereichen
 
 - DataInput
 - DataOutput
+- ObjectInput
+- ObjectOutput
+- Serializable
 
 ## Referenz
 
