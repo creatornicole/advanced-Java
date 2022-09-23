@@ -7,7 +7,7 @@
 
 ...Link zu Ressource im World Wide Web.
 
-[https://][www.javatpoint.com/][java-tutorial]
+[https://][www.javatpoint.com/][java-tutorial]\
 [Protocol][Host Name][File]
 
 - Ressource z.B.:
@@ -31,7 +31,7 @@ bspw.: openConnection()
 3. Benutze dieses URL Objekt, um URLConnection Objekt zu erstellen
 4. Nutze InputStreamReader und BufferedReader, um von URL Verbindung zu lesen
 5. readLine()-Methode des BufferedReader gibt String zurück, ist dieser gleich _null_ bedeutet das, dass man das Ende des Dokuments erreicht hat
-6. FÜge Strings, die man als Output von URL erhalten aht zu StringBuilder Objekt zusammen
+6. Füge Strings, die man als Output von URL erhalten aht zu StringBuilder Objekt zusammen
 
 **oder besser:**
 
