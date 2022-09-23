@@ -105,16 +105,52 @@
 2. Suchen/Sortieren
     <details>
      <summary>Suchen</summary>
+
+     - beschränkt sich hier auf Zahlen-Arrays
+     - zu lösendes Problem: in Zahlen-Array Index der vorgegebenen Zahl bestimmen
+     - zwei Möglichkeiten
+       - lineares Durchlaufen -> bei unsortierten Arrays -> Sequentielle/ Lineare Suche
+       - Intervall-Teilung -> bei sortierten Arrays -> Binäre Suche
+
     </details>
     <details>
      <summary>Sortieren</summary>
+
+     - Arrays aus einem oder keinem Element trivialerweise sortiert
+     - Einfache Sortieralgorithmen
+       - Prinzip: Array Nachbarelemente werden überprüft und gegebenenfalls vertauscht
+       - Aufwand immer quadratisch (O(n^2))
+       - Beispiele: Bubble-Sort, Selection-Sort, Insertion-Sort
+     - Effiziente Sortieralgorithmen
+       - Prinzip: "Teile und Herrsche"
+       - Aufwand im ungünstigsten Fall: O(n*log2n)
+       - Beispiele: Merge-Sort, Quick-Sort
+     - Spezielle Sortierverfahren: Count-Sort, Radix-Sort
+
     </details>
     <details>
      <summary>Aufwand</summary>
+
+     - zur Aufwandsbetrachtung wird Computer als "abstrakte Maschine" idealisiert, bei der alle Operationen die gleiche Zeiteinheit und alle elementaren Daten den gleichen Speicherplatz brauchen
+     - Betrachtung von T(n) mit n -> unendlich
+     - O-Notation soll dem Ziel dienen, eine möglichst einfache Klassifizierung des Aufwandes für unterschiedliche Algorithmen zu finden
+
     </details>
     <details>
      <summary>Zeichenkettensuche</summary>
     </details>
+
+    <details>
+     <summary>Dijkstra-Algorithmus</summary>
+
+     - mit Wegsuche nach Dijkstra garantiert kostengünstigsten Weg in Graphen berechnen
+     - Bedingungen:
+       - gerichteter Graph
+       - gewichteter Graph
+       - Kantengewichte des Graphen sind nicht negativ
+
+    </details>
+
 3. Datenstrukturen
     <details>
      <summary>Bibliotheken</summary>

@@ -178,13 +178,24 @@
 
 ## Radix-Sort
 
-...ist ein spezielles Sortierverfahren, welches Zeichenfolgen fester Länge durch das Verteilen auf Fächer sortiert.
+...ist ein spezielles Sortierverfahren, welches Zahlen durch das Verteilen auf Fächer sortiert.
 
-- jedes mögliche Zeichen erhält eigenes Fach
+anhand Beispiel von natürlichen Zahlen:
+- anhand Einerstelle Zahlen in Fächer 0-9 verteilen (Realisierung durch Array)
+- so, wie Array in Array geschrieben wurden, neu aufschreiben
+- anhand Zehnerstelle Zahlen in Fächer 0-9 verteilen (Realisierung durch Array)
+- in neuen Reihenfolge wieder aufschreiben
+- anhand Hunderterstelle Zahlen in Fächer 0-9 aufteilen (Realisierung durch Array)
+- in neuen Reihenfolge wieder aufschreiben
+- alle Stellen weiter so durchgehen
+- am Ende so Zahlen sortiert
+
+- Hinweis: 002, wenn 940 noch einsortiert wird -> also mit Nullen auffüllen
+
 - für jede Stelle findet Verteilungslauf und anschließender Sammellauf statt
-  - für "niedrigste" Stelle zuerst, für "höchste" Stelle zuletzt
-  - Verteilungslauf -> für Stelle i wird die Zeichenfolge auf das Fach für das Zeichen an dieser Stelle verteilt
-  - Sammellauf -> Zeichenfolgen werden aus den Fächern unter Beibehaltung ihrer relativen Reihenfolge entnommen
+  - für "niedrigste" Stelle zuerst, für "höchste" Stelle zuletzt, wenn aufsteigend sortiert werden soll
+  - Verteilungslauf -> für Stelle i wird die Zahl auf das Fach für die Zahl an dieser Stelle verteilt
+  - Sammellauf -> Zahlen werden aus den Fächern unter Beibehaltung ihrer relativen Reihenfolge entnommen
 
 ## "Unsortieren"
 

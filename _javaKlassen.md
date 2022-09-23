@@ -33,6 +33,7 @@
 | [FileInputStream](https://docs.oracle.com/javase/7/docs/api/java/io/FileInputStream.html)   |           |
 | [BufferedReader](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)     |           |
 | [FileReader](https://docs.oracle.com/javase/7/docs/api/java/io/FileReader.html)             |           |
+| [InputStreamReader](https://docs.oracle.com/javase/7/docs/api/java/io/InputStreamReader.html) |         |
 
 ## Interfaces
 
