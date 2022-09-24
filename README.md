@@ -140,12 +140,12 @@
      <summary>Zeichenkettensuche</summary>
 
      - Suchproblem
-       - gegeben: endliche Alphabet, Text als Zeichenkette a1...an, Muster als Zeichenketten b1...bm
+       - gegeben: endliches Alphabet, Text als Zeichenkette a1...an, Muster als Zeichenketten b1...bm
        - gesucht: Vorkommen Muster in Text, also b1...bm in a1...an
      - Suche in dynamischen Texten
        - Naive Verfahren -> einfach nacheinander Muster an Zeichenkette anlegen
        - Knuth-Morris-Pratt (KMP) -> mit Hilfe einer Verschiebungstabelle, die man zuvor anlegt, Suche durchführen
-       - Boyer-Moore -> anlegen Muster an Text von links nach rechts, jedoch Vergleich von rechts nach links, Verschiebung abhängig berechnen von Zeichen welches Mismatch zu verantworten hat (siehe "Regelungen" in extra Dok Zeichenkettensuche)
+       - Boyer-Moore -> anlegen Muster an Text von links nach rechts, jedoch Vergleich von rechts nach links, Berechnung Verschiebung abhängig machen von Zeichen welches Mismatch zu verantworten hat (siehe "Regelungen" in extra Dok Zeichenkettensuche)
      - Suche in statischen Texten
 
 
