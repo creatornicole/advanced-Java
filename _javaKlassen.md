@@ -19,6 +19,17 @@
 | Writer           |  |
 | ObjectInputStream | Byte-Streamklasse zur Objekt-Serialisierung |
 | ObjectOutputStream | Byte-Streamklasse zur Objekt-Serialisierung |
+| ArrayList          |                                                                  |
+| LinkedList         |                                                                  |
+| HashSet            |                                                                  |
+| LinkedHashSet      |                                                                  |
+| TreeSet            |                                                                  |
+| PriorityQueue      |                                                                  |
+| ArrayDeque         |                                                                  |
+| HashMap            |                                                                  |
+| LinkedHashMap      |                                                                  |
+| Hashtable          |                                                                  |
+| TreeMap            |                                                                  |
 
 ## Ein- und Ausgabe
 
@@ -45,3 +56,11 @@
 | ObjectOutput | |
 | Serializable | |
 | [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) |                |
+| ListIterator | |
+| List       | |
+| Set        | |
+| SortedSet  | |
+| Queue      | |
+| Deque      | |
+| Map        | |
+| SortedMap  | |

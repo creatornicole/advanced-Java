@@ -239,7 +239,7 @@
     <details>
      <summary>Hashing</summary>
     </details>
-    
+
 4. Bäume/Graphen
     <details>
      <summary>Bäume</summary>
@@ -268,6 +268,7 @@
 - ObjectInputStream (Bsp.: FileInputStream)
 - ObjectOutputStream (Bsp.: FileOutputStream)
 
+
 ## Wichtige Interfaces zu Themenbereichen
 
 - DataInput
@@ -275,6 +276,16 @@
 - ObjectInput
 - ObjectOutput
 - Serializable
+- Collection
+- List (-> ArrayList, LinkedList)
+- Set (-> HashSet, LinkedHashSet)
+- SortedSet (-> TreeSet)
+- Iterator
+- ListIterator
+- Queue (-> LinkedList, PriorityQueue)
+- Deque (-> LinkedList, ArrayDeque)
+- Map (-> HashMap, LinkedHashMap, Hashtable)
+- SortedMap (-> TreeMap)
 
 ## Referenz
 
