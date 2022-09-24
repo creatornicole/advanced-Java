@@ -321,9 +321,6 @@
 
     </details>
 
-    <details>
-     <summary>Breitensuche in Graphen</summary>
-    </details>
 
     <details>
      <summary>Tiefen-/Breitensuche in Graphen</summary>
