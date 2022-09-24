@@ -241,14 +241,110 @@
     </details>
 
 4. Bäume/Graphen
-    <details>
-     <summary>Bäume</summary>
-    </details>
+
     <details>
      <summary>Graphen</summary>
+
+     - bestehen aus Knotenmenge und Kantenmenge
+     - Unterscheidung von gerichteter- und ungerichteter Graph
+     - Darstellung unterschiedlich möglich
+       - Kantenmenge -> Angabe Gesamtzahl Knoten, Angabe Gesamtzahl Kanten, zudem Angabe der Paarungen von Knoten, die verbunden sind
+       - (Adjazenz)Matrix -> 2-dimensionales Knoten-zu-Knoten boolsches Feld bzw. Integer-Feld (Integer bei Gewichtung), Zeilen-/Spaltenanzahl = Anzahl der Knoten
+       - Nachbarschaftsliste -> zu jedem Knoten existiert Liste von verbundenen Knoten
+
     </details>
+
+
     <details>
-     <summary>Tiefen-/Breitensuche</summary>
+     <summary>Bäume</summary>
+
+     - nichtlineare Datenstrukturen für flexibles und effizientes Einfügen, Löschen und Suchen
+     - oft zur hierarchischen Verwaltung von Daten
+     - Bäume sind spezielle Graphen
+       - mit speziellen Knoten "Wurzel"
+       - außer Wurzel hat jeder Knoten genau einen Vorgängerknoten
+       - von Wurzel aus führt zu jedem Knoten genau eine Kantenfolge
+
+     - Traversierung
+       - Pre-Order: Wurzel -> linker Teilbaum -> rechter Teilbaum
+       - In-Order: linker Teilbaum -> Wurzel -> rechter Teilbaum
+       - Post-Order: linker Teilbaum -> rechter Teilbaum -> Wurzel
+
+    </details>
+
+    <details>
+     <summary>MST = Minimum Spanning Tree</summary>
+
+     - Teilgraph eines ungerichteten, gewichteten Graphen
+     - Teilgraph enthält alle Knoten des Graphen mit minimalen Aufwand
+
+    </details>
+
+    <details>
+     <summary>Termbäume</summary>
+
+     - stellen (Rechen)Ausdrücke eindeutig dar
+     - Eindeutig dadurch, dass Operatoren ihren Operanden explizit zugeordnet werden
+     - Operatoren (also Rechenzeichen) = Marke der inneren Knoten
+     - Operanden (Zahlen) zu Operator = Teilbäume, die in Nachfolger-/Kindknoten beginnen
+     - Konstante = Marke der Blätter
+
+    </details>
+
+    <details>
+     <summary>Binäre Bäume</summary>
+
+     - all solche Bäume, derer Knoten maximal zwei direkte Nachfolger besitzen
+     - Kindknoten lassen sich somit eindeutig in linkes und rechtes Kind einteilen
+
+    </details>
+
+    <details>
+     <summary>Binäre Suchbäume</summary>
+
+     - Binärer Baum ist Binärer Suchbaum, wenn gilt...
+       - Marke der Knoten des linken Teilbaums sind alle kleiner als Marke des aktuellen Knotens
+       - Marke der Knoten des rechten Teilbaums sind alle größer oder gleich der Marke des aktuellen Knotens
+     - Einfügen und Suchen durch Größenvergleich
+       - Größenvergleich bestimmt, welcher Teilbaum weiter abgegangen werden muss
+       - Größenvergleich solange durchführen bis keine Nachfolgerknoten mehr existieren, an dieser Stelle einfügen
+     - Löschen verlangt unterschiedliche Vorgehensweisen
+       - Löschen eines Blattes -> einfach Blatt löschen
+       - Löschen innerer Knoten mit zwei Teilbäumen -> kleinste Element des rechten Teilbaums ersetzt inneren Knoten
+       - Löschen innerer Knoten mit einem Teilbaum -> innerer Knoten mit nächsten Wert des Teilbaums ersetzen
+       - Löschen der Wurzel
+         - linker Teilbaum leer: Wurzel ersetzen durch Wurzel des rechten Teilbaums
+         - rechter Teilbaum leer: Wurzel ersetzen durch Wurzel des linken Teilbaums
+         - beide Teilbäume nicht leer
+           - aus rechten Teilbaum Knoten mit minimalsten Dateninhalt löschen, Dateninhalt in Wurzel übernehmen
+           - aus linken Teilbaum Knoten mit maximalen Dateninhalt löschen, Dateninhalt in Wurzel übernehmen
+
+    </details>
+
+    <details>
+     <summary>Breitensuche in Graphen</summary>
+    </details>
+
+    <details>
+     <summary>Tiefen-/Breitensuche in Graphen</summary>
+
+     - Tiefensuche durchsucht zuerst in Tiefe
+       - d.h. wird so weit wie möglich entlang jedes Zweigs untersucht
+       - maximaler Speicherbedarf = Tiefe des Baumes
+       - einsetzen wenn man weiß, dass...
+         - Lösung irgendwo tief in einem Baum oder weit entfernt vom Quellscheitelpunk im Diagramm liegt
+         - Baum sehr breit ist -> benötigt in diesem Fall weniger Speicher als bei Breitensuche
+
+     - Breitensuche durchsucht zuerst in Breite
+       - d.h. untersucht zuerst Nachbarknoten, bevor zu Nachbarn der nächsten Ebene übergangen wird
+       - maximaler Speicherbedarf = Breite des Baumes
+       - einsetzen wenn man weiß, dass...
+         - Lösung nicht so weit vom Quellknoten entfernt liegt
+         - Baum besonders tief -> benötigt in diesem Fall weniger Speicher als Tiefensuche
+
+
+
+
     </details>
 
 ## Wichtige Klassen zu Themenbereichen
