@@ -169,19 +169,77 @@
 3. Datenstrukturen
     <details>
      <summary>Bibliotheken</summary>
+
+     - erweitern Funktionalität von Java
+     - qualitativ sehr unterschiedlich
+     - Beispiele: Log4j, SLF4j, LogBack, JSON, JUnit, Apache Commons, Guava
+
     </details>
     <details>
-     <summary>Collection</summary>
+     <summary>Collections-Framework</summary>
+
+     - beinhaltet Interfaces, Implementierungen und Algorithmen zur einheitlichen Architektur, Darstellung und Bearbeitung von verschiedensten Behältern (also verschiedenster Datenstrukturen, die Dinge auf verschiedene Art und Weise einfügen und entnehmen lassen)
+     - Bsp.: Collections.sort(), Arrays.asList()
+     - Interfaces beschreiben häufig verwendete abstrakte Datentypen
+       - Sammlungen (Mengen-Behälter)
+         - Collection
+         - List (ArrayList, LinkedList) -> Elemente in bestimmter Reihenfolge
+         - Set (HashSet, LinkedHashSet) -> ohne bestimmte Reihenfolge, ohne Dopplung (Mengen im Sinn der Mathematik)
+         - SortedSet (TreeSet) -> Mengen mit Ordnung (definiert durch Comparable/Comparator)
+        - Zum Traversieren
+          - Iterator -> Traversieren Behälter
+          - ListIterator -> Traversieren Liste
+        - Warteschlangen-Behälter
+          - Queue (LinkedList, PriorityQueue) -> Entnahme nur von vorn
+          - Deque (LinkedList, ArrayDeque) -> quasi zweiseitger Stapel (von beiden Enden Elemente nach LIFO ("Last-In-First-Out") einfügen und entnehmen möglich)
+        - Abbildungs-Behälter
+          - Map (HashMap, LinkedHashMap, Hashtable) -> Speicherung "Schlüssel-Wert-Paare", keine doppelten Schlüssel (Abbildungen im Sinn der Mathematik)
+          - SortedMap (TreeMap) -> Ordnung auf Schlüssel
+
     </details>
     <details>
-     <summary>Externe Datenstrukturen</summary>
+     <summary>Externe Datenstrukturen: XML, JSON</summary>
+
+     - XML
+       = extensible markup language (stark vereinfachte Markup Language)
+       - dient Speicherung, Übertragung, Rekonstruktion von beliebigen Daten
+       - Semantik -> Inhalt sehr flexibel wählbar
+       - Syntax -> Grammatik sehr streng
+       - Programmierschnittstellen: DOM, SAX, StAX, XLST, XPath
+       - Anwendung: Websites, Grafiken, Web Services, Konfigurationen
+     - JSON
+       = JavaScript Object Notation
+       - ähnlich zu XML jedoch kompakter
+       - Anwendung: primär Webanwendungen, Apps
+
     </details>
     <details>
-     <summary>Listen</summary>
+     <summary>Verkettete Listen</summary>
+
+     - einfach verkettete lineare Liste
+       - Aneinanderreihung von Listenelementen
+       - Inhalt jedes Listenelements...
+         - data -> Dateninhalt
+         - next -> Verweis auf nächste Listenelement
+       - Zugriff über erste Element
+       - nur sequentielle Suche möglich
+       - letzte Element an "leerem" Verweis erkennbar
+       - wenn Verweis auf letzte Listenelement vorhanden, so Durchlaufen zum Einfügen nicht notwendig
+     - Doppelt verkettete Ringliste -> mit erstem und letztem Hilfselement
+       - Aneinanderreihung von Listenelementen
+       - Inhalt jedes Listenelements...
+         - data -> Dateninhalt
+         - next -> Verweis auf nächste Listenelement
+         - prev -> Verweis auf vorhergehende Listenelement
+       - Eintrittselement _entry_ dient nicht zur Datenspeicherung
+       - leere Liste wird durch Eintrittselement _entry_ mit Verweisen auf sich selbst dargestellt
+
+
     </details>
     <details>
      <summary>Hashing</summary>
     </details>
+    
 4. Bäume/Graphen
     <details>
      <summary>Bäume</summary>

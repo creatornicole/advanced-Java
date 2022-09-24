@@ -1,4 +1,4 @@
-# Verkettete LIsten
+# Verkettete Listen
 
 - einfach verkettete lineare Listen lassen sich nur sequentiell durchsuchen, deswegen verschiedenartig ausgebaut
   - einfach verkettete Liste mit Referenzen auf erste und letzte Element

@@ -10,7 +10,7 @@
     - Datenbanken
     - JSON
 
-- Qualität schankt sehr, da keine genaue Richtlinien existieren
+- Qualität schwankt sehr, da keine genaue Richtlinien existieren
 
 ## Bibliotheken zum Logging von Fehlern
 
@@ -92,5 +92,5 @@ Bsp.: Grafische Darstellung von Funktionen/Abbildungen in Mathe
 - weitere bekannte Bibliotheken
   - JSON -> zur JSON-Verarbeitung in Java
   - JUnit -> zum Testen von Java Programmen
-  - Apache Commons -> _reusable components_ zur Verfügung stellen
+  - Apache Commons -> _reusable components_ zur Verfügung stellen (bspw. grafische Darstellung von Funktionen/Abbildungen in der Mathematik)
   - Guava
