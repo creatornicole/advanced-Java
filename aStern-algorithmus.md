@@ -7,7 +7,6 @@
 - Algorithmus ist vollständig und optimal, d.h. wenn optimale Lösung existiert, so wird diese auch gefunden
 
 - Voraussetzungen
-  - gerichteter Graph
   - gewichteter Graph
   - Kantengewichte positiv
 
