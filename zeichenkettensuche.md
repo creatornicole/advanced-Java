@@ -193,9 +193,9 @@ Bsp.:
 | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | a | b | e | r |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 
 
@@ -203,6 +203,68 @@ Bsp.:
   - somit nur einen Bruchteil der Textzeichen des Textes mit Muster vergleichen nötig
   - dennoch kein Vorkommen des Musters in Text übersehen
 
+## Bad Match Suche
+
+1. Aufstellen der Bad Match Tabelle
+   - bestimme Maximum aus 1 und (Länge des Musters - aktueller Index - 1)
+   - für jedes Zeichen in Muster durchgehen
+   - tritt Zeichen in Muster mehrmals auf, so geringeres Maximum in Bad Match Tabelle eintragen
+2. Muster von links beginnend an Text legen
+3. Zeichenweise von rechts nach links durchgehen
+4. Tritt Mismatch auf, so Zeichen aus Text, welches Mismatch verursacht hat, in Bad Match Tabelle suchen und um angegebene Stellen nach rechts verschieben
+   - tritt Zeichen aus Text, welches Mismatch verursacht hat, nicht in Bad Match Tabelle auf, so eingetragenen Index unter "*" als Verschiebungsfaktor nehmen
+
+Bsp.:\
+gegeben:
+- Text... a b a b c a b c a b a b d
+- Muster... a b a b d
+
+1. Aufstellen Bad Match Tabelle
+| Index  | 0 | 1 | 2 | 3 | 4 |
+|--------|---|---|---|---|---|
+| Muster | a | b | a | b | d |
+
+- Maximum aus 1 und (Länge des Musters - aktueller Index - 1)
+  - a... Max(1, 5 - 0 -1) = Max(1, 4) = 4
+  - b... Max(1, 5 - 1 - 1) = Max(1, 3) = 3
+  - a... Max(1, 5 - 2 - 1) = Max(1, 2) = 2
+  - b... Max(1, 5 - 3 - 1) = Max(1, 1) = 1
+  - d... Max(1, 5 - 4 - 1) = Max(1, 0) = 1
+  - Sonstige(*)... Max(1, 5 - 0 - 1) = Max(1, 4) = 4 -> für sonstige Zeichen Index 0 nehmen
+
+| Buchstabe | a | b | d | * |
+|-----------|---|---|---|---|
+| Index     | 2 | 1 | 1 | 4 |
+
+2. Muster von links beginnend an Text legen
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster | a | b | a | b | d |   |   |   |   |   |   |   |   |
+
+3. Zeichenweise von links nach rechts durchgehen
+4. Tritt Mismatch auf, so Zeichen aus Text, welches Mismatch verursacht hat, in Bad Match Tabelle suchen und um angegebene Stellen nach rechts verschieben
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster | a | b | a | b | d |   |   |   |   |   |   |   |   |
+
+-> c verursacht Mismatch -> nicht in Bad Match Tabelle -> zählt unter Sonstige "*" -> Verschiebung um 4 nach rechts
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   | a | b | a | b | d |   |   |   |   |
+
+-> a verursacht Mismatch -> in Bad Match Tabelle mit Verschiebung um 2 nach rechts gekennzeichnet
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   |   |   | a | b | a | b | d |   |   |
+
+-> a verursacht erneut Mismatch -> Verschiebung erneut um 2 nach rechts
+
+| Text   | a | b | a | b | c | a | b | c | a | b | a | b | d |
+|--------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Muster |   |   |   |   |   |   |   |   | a | b | a | b | d |
 
 ## Suche in statischen Texten
 
@@ -229,3 +291,6 @@ Bsp.:
     - Anlegen Muster an Text erfolgt ebenso von links nach rechts
     - Vergleichsrichtung jedoch von rechts nach links
     - praktisch für kurze Zeichenfolge für viel Text -> mit Verfahren Muster oftmals um große Distanzen nach rechts verschieben möglich und somit nur einen Bruchteil der Textzeichen des Textes mit Muster vergleichen notwendig
+  - Bad Match
+    - Aufstellen Bad Match Tabelle
+    - bei Mismatch, Zeichen aus Text, welches Mismatch verursacht hat, in Tabelle suchen und um eingetragenen Index (= Verschiebungsfakor) nach rechts verschieben
