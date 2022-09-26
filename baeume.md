@@ -98,6 +98,21 @@ Strategien
     - aus linken Teilbaum Knoten mit maximalem Dateninhalt lösche, Dateninhalt in Wurzel übernehmen
 - Suchen eines Wertes: ständiger "Größer-Kleiner-Gleich-Vergleich" mit Wurzel
 
+## Minimum Spanning Tree (MST)
+
+...oder auch Minimalgerüst oder Gerüst des kleinsten Wertes, ist ein Teilgraph eines ungerichteten Graphen, der ein Baum ist, der alle Knoten des Graphen enthält.
+
+- Reminder zu Bäume...
+  - Bäume sind spezielle Graphen
+  - haben speziellen Knoten "Wurzel"
+  - außer Wurzel hat jeder Knoten genau einen Vorgängerknoten
+  - von Wurzel aus führt zu jedem Knoten genau eine Kantenfolge
+
+- Charakteristisches eines MST...
+  - ungerichteter Graph
+  - Kanten gewichtet
+  - MST ist Teilgraph eines ungerichteten Graphen mit minimalen Aufwand (Kanten mit geringsten Gewichtung)
+
 ## Zusammenfassung
 
 - nichtlineare Datenstrukturen für flexibles und effizientes Einfügen, Löschen und Suchen
@@ -114,3 +129,4 @@ Strategien
 - Binäre Suchbäume sind binäre Bäume, für dessen Knoten folgendes gilt...
   - Marke der Knoten des linken Teilbaums kleiner als Wurzel
   - Marke der Knoten des rechten Teilbaums größer/gleich Wurzel
+- Minimum Spanning Tree (MST) = minimaler Teilgraph eines ungerichteten Graphen mit gewichteten Kanten, welcher einen Baum mit allen Knoten des Graphen darstellt

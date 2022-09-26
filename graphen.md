@@ -8,6 +8,14 @@
     - P(V) ist dabei alle 2-elementigen Teilmengen von V
   - in grafischen Darstellung erkennt man gerichteten- und ungerichteten Graphen daran, dass die Kanten des gerichteten Graphen durch Pfeilspitzen in eine Richtung zeigen, die Kanten des ungerichteten Graphen existieren dabei einfach zwischen den Knoten, ohne eine Richtung anzugeben
 
+## Grundbegriffe
+
+| Begriff           | Erklärung                                                                                |
+|-------------------|------------------------------------------------------------------------------------------|
+| Grad eines Knoten | Anzahl der Kanten, die mit dem Knoten verbunden sind/die an diesen angrenzen             |
+| Weg               | Folge von Knoten, bei welcher aufeinanderfolgende Knoten durch eine Kante verbunden sind |
+| Länge des Weges   | Kantenanzahl oder (Knotenanzahl - 1)                                                     |
+
 ## Bezeichnung Kanten
 
 - Kreis der Länge [xy]
@@ -42,22 +50,7 @@
   - jeder Knoten enthält Liste von verbundenen Knoten (den Nachbarknoten)
   ![Nachbarschaftsliste](nachbarschaftsliste.PNG)
 
-## Minimum Spanning Tree (MST)
-
-...oder auch Minimalgerüst oder Gerüst des kleinsten Wertes, ist ein Teilgraph eines ungerichteten Graphen, der ein Baum ist, der alle Knoten des Graphen enthält.
-
-- Reminder zu Bäume...
-  - Bäume sind spezielle Graphen
-  - haben speziellen Knoten "Wurzel"
-  - außer Wurzel hat jeder Knoten genau einen Vorgängerknoten
-  - von Wurzel aus führt zu jedem Knoten genau eine Kantenfolge
-
-- Charakteristisches eines MST...
-  - ungerichteter Graph
-  - Kanten gewichtet
-  - MST ist Teilgraph eines ungerichteten Graphen mit minimalen Aufwand (Kanten mit geringsten Gewichtung)
-
-  ## Zusammenfassung
+## Zusammenfassung
 
 - Graphen bestehen aus Knotenmenge V (Vertex) und Kantenmenge E (Edge)
 - man unterscheidet gerichteten- und ungerichteten Graphen
@@ -65,4 +58,3 @@
   - Kanten-Menge (Angabe Gesamtanzahl Knoten, Kanten, Knotenpaare)
   - Matrix (Zeilen-, Spaltenanzahl Matrix = Knotenanzahl)
   - Liste (zu jeden Knoten Liste von Nachbarknoten vermerken)
-- Minimum Spanning Tree (MST) = minimaler Teilgraph eines ungerichteten Graphen mit gewichteten Kanten, welcher einen Baum mit allen Knoten des Graphen darstellt
