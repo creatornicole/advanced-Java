@@ -9,7 +9,7 @@
 3. Die beiden kleinsten Elemente auswählen und neuen Knoten bilden
 4. Solange Schritt 3, bis Baum erstellt
 5. Alle linken Verzweigungen bekommen den Wert 0, alle rechten Verzweigungen den Wert 1
-6. Alle Zeichen der Zeichenkette im Baum suchen, Weg dahin (also Folge von 0 und 1) ausgehend von Wurzel codiert Zeichen
+6. Alle Zeichen der Zeichenkette im Baum suchen, Weg dahin (also Folge von 0 und 1) ausgehend von Wurzel kodiert Zeichen
 
 ## Zusammenfassung
 
