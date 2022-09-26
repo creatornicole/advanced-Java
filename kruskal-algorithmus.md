@@ -2,9 +2,10 @@
 
 ...dient der Ermittlung des Minimum Spanning Tree (MST).
 
-- Reminder: MST = ein minimaler Spannbaum ist ein aufspannender Baum eines zusammenhängenden, ungerichteten Graphen.
+- Reminder: MST = Ein minimaler Spannbaum ist ein aufspannender Baum eines zusammenhängenden, ungerichteten Graphen.
 Dieser verbindet alle Knoten mit minimaler Gesamtgewichtung für seine Kanten
 - Voraussetzungen
+  - zusammenhängender Graph
   - ungerichteter Graph
   - gewichtete Kanten
 

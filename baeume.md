@@ -100,7 +100,7 @@ Strategien
 
 ## Minimum Spanning Tree (MST)
 
-...oder auch Minimalgerüst oder Gerüst des kleinsten Wertes, ist ein Teilgraph eines ungerichteten Graphen, der ein Baum ist, der alle Knoten des Graphen enthält.
+...oder auch Minimalgerüst oder Gerüst des kleinsten Wertes, ist ein Teilgraph eines ungerichteten Graphen, der ein Baum ist, der alle Knoten des Graphen mit der geringsten Gesamtkantengewichtung enthält.
 
 - Reminder zu Bäume...
   - Bäume sind spezielle Graphen
