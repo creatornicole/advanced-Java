@@ -51,6 +51,10 @@ Bsp.:
 | Set          | für Behälter ohne doppelte Elemente und ohne bestimmte Reihenfolge (Mengen im Sinn der Mathematik)                    | HashSet, LinkedHashSet          |
 | SortedSet    | für Mengen mit einer Ordnung der Elemente (definiert durch Comparable bzw. Comparator)                                | TreeSet                         |
 
+- TreeSet und HashSet
+  - Gemeinsamkeit: keine doppelten Werte bzw. Elemente
+  - Unterschied: TreeSet speichert Werte nach Ordnung (natürlich oder künstlich), wohingegen HashSet Werte nach einer Hashfunktion speichert
+
 ### Zum Traversieren
 
 ...zum Durchlaufen.

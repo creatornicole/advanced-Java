@@ -9,6 +9,7 @@
 | benötigt keine zusätzliche Datenstruktur zum Speichern der Baum-/Graphknoten | benötigt separate Datenstruktur zum Verfolgen der noch zu besuchenden Baum-/Graphknoten |
 | wird rekursiv implementiert und verwendet Call-Stack                         | Verfolgung geschieht iterativ mit Queuen-Datenstruktur                                  |
 | Speicherbedarf abhängig von Struktur Baums/Graphens, jedoch maximaler Speicher = Tiefe des Baums | Speicherbedarf ebenfalls abhängig von Struktur des Baums/Graphen, jedoch maximaler Speicher = Breite des Baums |
+| findet Weg,  falls ein Weg existiert                           | findet optimalen Weg, falls ein Weg existiert                  |
 
 
 Reihenfolge Tiefensuche\
@@ -29,8 +30,8 @@ Reihenfolge Breitensuche\
 
 ## Zusammenfassung
 
-- Tiefensuche: Baum/Graph wird zuerst in Tiefe abgesucht
-- Breitensuche: Baum/Graph wird zuerst in Breite abgesucht, bevor es in Tiefe weitergeht
+- Tiefensuche: Baum/Graph wird zuerst in Tiefe abgesucht -> findet Weg, falls ein Weg existiert
+- Breitensuche: Baum/Graph wird zuerst in Breite abgesucht, bevor es in Tiefe weitergeht -> findet optimalen Weg, falls ein Weg existiert
 - Tiefensuche verwenden
   - wenn man im Voraus weiß, dass Lösung irgendwo tief in einem Baum oder weit entfernt vom Quellscheitelpunkt im Diagramm liegt
   - man weiß, dass Baum sehr breit ist -> benötigt in diesem Fall weniger Speicher als Breitensuche, da maximaler Speicherbedarf bei Tiefensuche = Tiefe des Baumes

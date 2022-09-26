@@ -9,7 +9,7 @@
 - genaue quantitative Aussagen schwierig
   - deswegen keine realen Laufzeiten und Speichervolumen
   - sondern Größenordnungen in Abhängigkeit von Umfang und Art der Eingabedaten
-  - Idealisierung des Ccomputers als "abstrakte Maschine", bei der alle Operationen die gleiche Zeiteinheit und alle elementaren Daten den gleichen Speicherplatz brauchen.
+  - Idealisierung des Computers als "abstrakte Maschine", bei der alle Operationen die gleiche Zeiteinheit und alle elementaren Daten den gleichen Speicherplatz brauchen.
 
 - Aufpassen: Was mit kleinen Eingabemengen noch gut funktioniert, kann bei Anwachsen der Eingabemenge rasch zu einem Problem werden
 
@@ -36,8 +36,6 @@
       - "worst case" -> ungünstigster Aufwand
 - Zeitaufwand
   - abhängig von Eingabewerten -> Rechenkomplexität
-
-
 
 ## O-Notation
 
