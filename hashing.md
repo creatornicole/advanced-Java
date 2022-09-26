@@ -64,3 +64,11 @@ Lösung:
 ...treten immer dann auf, wenn man ein neues Element einfügen möchte, dessen Slot bereits belegt ist.\
 
 -> Kollisionen beheben bzw. von Anfang an verhindern: "gute" Hash-Funktion verwenden
+
+## Zusammenfassung
+
+- Hashing = aufteilen der gesamten Schlüsselmenge
+- Hashfunktion wird genutzt, um Schlüssel auf Slots der Hash-Tabelle abzubilden
+- verschiedene Qualitäten einer Hashfunktion vorhanden
+  - _gut_ -> erzeugt auch bei hohen Belegungsfaktor nur wenig Kollisionen und ist effizient zu berechnen
+  - _perfekt_ -> wenn für Menge von Schlüsseln S keine Kollisionen auftreten -> dafür: |S| <= m bzw. Belegungsfaktor n/m <= 1
